@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Najm-Us-Saqib | Front End Engineer</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #2c3e50;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: #e74c3c;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .gray {
+            color: darkgray;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .logo span {
+            color: #e74c3c;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            font-weight: 500;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: #e74c3c;
+        }
+        
+        nav ul li a:after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #e74c3c;
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('/api/placeholder/1200/800');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .hero-content {
+            width: 100%;
+            padding: 0 20px;
+        }
+        
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero-content h2 {
+            font-size: 24px;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        
+        .hero-btn {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 500;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+        }
+        
+        .hero-btn:hover {
+            background-color: #c0392b;
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(231, 76, 60, 0.4);
+        }
+        
+        /* About Section */
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .section-title h2:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #e74c3c;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .about-img {
+            flex-basis: 40%;
+        }
+        
+        .about-img img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-text {
+            flex-basis: 55%;
+        }
+        
+        .about-text h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .about-text p {
+            margin-bottom: 15px;
+        }
+        
+        .skills {
+            margin-top: 30px;
+        }
+        
+        .skill-item {
+            margin-bottom: 15px;
+        }
+        
+        .skill-name {
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .skill-bar {
+            width: 100%;
+            height: 10px;
+            background-color: #e6e6e6;
+            border-radius: 10px;
+            position: relative;
+        }
+        
+        .skill-progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            border-radius: 10px;
+            background-color: #e74c3c;
+        }
+        
+        /* Experience Section */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background-color: #e74c3c;
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 60px;
+        }
+        
+        .timeline-content {
+            position: relative;
+            width: 45%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            left: 55%;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            left: 0;
+        }
+        
+        .timeline-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .timeline-date {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .timeline-content p {
+            margin-bottom: 0;
+        }
+        
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background-color: #e74c3c;
+            border-radius: 50%;
+            z-index: 1;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+       /* Updated Projects Section without Images */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-card.no-image {
+    padding-top: 25px;
+}
+
+.project-icon {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.project-icon span {
+    font-size: 40px;
+    background: linear-gradient(145deg, #f9f9f9, #f0f0f0);
+    width: 80px;
+    height: 80px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05),
+                -5px -5px 15px rgba(255, 255, 255, 0.6);
+}
+
+.project-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.project-info p {
+    color: #666;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.tech-tag {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tech-tag:hover {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+        /* Education Section */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .education-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .education-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .education-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #e74c3c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            color: #fff;
+            font-size: 24px;
+        }
+        
+        .education-info h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .education-info h4 {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .education-date {
+            font-size: 14px;
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+        
+        /* Contact Section */
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .contact-info {
+            flex-basis: 45%;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #e74c3c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            color: #fff;
+            font-size: 20px;
+        }
+        
+        .contact-text h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .contact-form {
+            flex-basis: 50%;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e6e6e6;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        textarea.form-control {
+            height: 150px;
+            resize: none;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #e74c3c;
+        }
+        
+        .submit-btn {
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .footer-col {
+            flex-basis: 30%;
+            margin-bottom: 30px;
+        }
+        
+        .footer-col h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #e74c3c;
+        }
+        
+        .footer-col p {
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            color: #fff;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background-color: #e74c3c;
+            transform: translateY(-5px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 30px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 991px) {
+            .about-img, .about-text {
+                flex-basis: 100%;
+            }
+            
+            .about-img {
+                margin-bottom: 30px;
+            }
+            
+            .contact-info, .contact-form {
+                flex-basis: 100%;
+            }
+            
+            .contact-info {
+                margin-bottom: 40px;
+            }
+            
+            .timeline-content {
+                width: 90%;
+                left: 5% !important;
+            }
+            
+            .timeline:before {
+                left: 5%;
+            }
+            
+            .timeline-item:before {
+                left: 5%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                position: relative;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                position: absolute;
+                right: 0;
+                top: 100%;
+                background-color: #2c3e50;
+                width: 200px;
+                padding: 20px;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                border-radius: 0 0 5px 5px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+            
+            nav.active {
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin-left: 0;
+                margin-bottom: 15px;
+            }
+            
+            .hero-content h1 {
+                font-size: 36px;
+            }
+            
+            .hero-content h2 {
+                font-size: 18px;
+            }
+            
+            .section-title h2 {
+                font-size: 28px;
+            }
+            
+            .footer-col {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Najm <span>Us Saqib</span></div>
+                <div class="mobile-menu-btn">☰</div>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Najm Us Saqib</h1>
+                <h2>Front End Engineer</h2>
+                <p>Expert in Angular, TypeScript, and Test Automation</p>
+                <p><i class="gray">Crafting scalable, maintainable, and high-performance user interfaces with a strong focus on quality and reliability</i></p>
+                <a href="#contact" class="hero-btn">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="editprofile.jpeg" alt="Najm Us Saqib">
+                </div>
+                <div class="about-text">
+                    <h3>Front End Engineer</h3>
+                    <p>I'm a professional front-end developer looking for a multinational organization to enhance my skills and contribute to the software industry. With expertise in Angular, TypeScript, and test automation, I bring a solid technical foundation and a commitment to delivering high-quality solutions.</p>
+                    <p>My experience includes working as a Team Lead for frontend development teams, creating responsive web applications, and implementing automated testing solutions that improve product quality and development efficiency.</p>
+                    
+                    <div class="skills">
+                        <h3>Technical Skills</h3>
+                        
+                        <div class="skill-item">
+                            <div class="skill-name">JavaScript / TypeScript</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-name">Angular 2+</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-name">Protractor (Test Automation)</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-name">REST API</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-name">HTML5 & CSS</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-name">Bootstrap / Angular Material</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section" style="background-color: #f0f0f0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Work Experience</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">Dec 2021 - Present</span>
+                        <h3>Front End Engineer</h3>
+                        <h4>Infocabs Global Ltd, Islamabad</h4>
+                        <p>Working as a Front End Web Developer, developing and maintaining user interfaces for web applications using Angular and related technologies.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">Sep 2019 - Dec 2021</span>
+                        <h3>Team Lead - Frontend</h3>
+                        <h4>SMSAMI Inc, Peshawar</h4>
+                        <p>Led the frontend development team, managing resources, timelines, and deliverables while contributing to technical solutions and mentoring team members.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">Sep 2019 - Dec 2021</span>
+                        <h3>Front End Developer</h3>
+                        <h4>SMSAMI Inc, Peshawar</h4>
+                        <p>Developed responsive and interactive web applications using Angular, TypeScript, and modern frontend technologies.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">Sep 2019 - Dec 2021</span>
+                        <h3>Test Automation Engineer</h3>
+                        <h4>SMSAMI Inc, Peshawar</h4>
+                        <p>Implemented automated testing solutions using Protractor to improve software quality and development efficiency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    
+<section id="projects" class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Projects</h2>
+            <p class="section-subtitle">Some of my recent work</p>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card no-image">
+                <div class="project-icon">
+                    <span>🚕</span>
+                </div>
+                <div class="project-info">
+                    <h3>Infocabs EVOP</h3>
+                    <p>Real-time cab booking app serving primarily in the UK, with web admin interface and mobile application.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Angular v12</span>
+                        <span class="tech-tag">Infragistics</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">NGXS</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card no-image">
+                <div class="project-icon">
+                    <span>💼</span>
+                </div>
+                <div class="project-info">
+                    <h3>Paktax</h3>
+                    <p>Application designed to help users understand and file their tax returns efficiently.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Angular v8</span>
+                        <span class="tech-tag">Bootstrap</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">NGXS</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card no-image">
+                <div class="project-icon">
+                    <span>✈️</span>
+                </div>
+                <div class="project-info">
+                    <h3>Flyaway Hub</h3>
+                    <p>Fixed bugs, developed new features, and automated over 1000 end-to-end test cases for this platform.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Angular Material</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">HTML</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card no-image">
+                <div class="project-icon">
+                    <span>🍔</span>
+                </div>
+                <div class="project-info">
+                    <h3>Ready To Munch</h3>
+                    <p>Worked as team lead, focusing on new features, application performance, and maintenance.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Angular Material</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">HTML</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card no-image">
+                <div class="project-icon">
+                    <span>🚗</span>
+                </div>
+                <div class="project-info">
+                    <h3>Motorway Express</h3>
+                    <p>Led team for Motorway Express, working on new features, app performance, maintenance, and team management.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Angular v13</span>
+                        <span class="tech-tag">Angular Material</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">State Management</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card no-image">
+                <div class="project-icon">
+                    <span>🚚</span>
+                </div>
+                <div class="project-info">
+                    <h3>ZiggyJobs</h3>
+                    <p>Online job search portal for the transportation industry in Canada, with web and mobile applications.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Angular v7</span>
+                        <span class="tech-tag">Bootstrap</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">NGXS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Education Section -->
+    <section id="education" class="section" style="background-color: #f0f0f0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Education & Certifications</h2>
+            </div>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-icon">
+                        🎓
+                    </div>
+                    <div class="education-info">
+                        <h3>Bachelor of Software Engineering</h3>
+                        <h4>City University of Science and Information Technology, Peshawar</h4>
+                        <p class="education-date">CGPA: 3.54</p>
+                    </div>
+                </div>
+                
+                <div class="education-card">
+                    <div class="education-icon">
+                        📜
+                    </div>
+                    <div class="education-info">
+                        <h3>Hafiz e Quran</h3>
+                        <p>Complete memorization of the Holy Quran</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Me</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            📧
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>saqibnizam5@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            📞
+                        </div>
+                        <div class="contact-text">
+                            <h3>Phone</h3>
+                            <p>+92 (342) 0192138</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            📍
+                        </div>
+                        <div class="contact-text">
+                            <h3>Location</h3>
+                            <p>Islamabad, Pakistan</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>About Me</h3>
+                    <p>Front End Engineer specializing in Angular, TypeScript and Test Automation with experience in developing responsive and interactive web applications.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">
+                            <i>in</i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i>gh</i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i>tw</i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="color: white;"><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p>Islamabad, Pakistan</p>
+                    <p>saqibnizam5@gmail.com</p>
+                    <p>+92 (342) 0192138</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Najm Us Saqib. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.getElementById('nav');
+        
+        menuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+        
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                    }
+                }
+            });
+        });
+        
+        // Form Submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Here you would typically add code to handle form submission
+                // For example, using fetch to send the data to a server
+                alert('Thank you for your message! I will get back to you soon.');
+                this.reset();
+            });
+        }
+        
+        // Scroll Effect for Header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.padding = '10px 0';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.padding = '20px 0';
+                header.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
