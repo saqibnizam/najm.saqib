@@ -791,6 +791,7 @@
                             </div>
                         </div>
                     </div>
+                    <button type="button" id="downloadCV" class="submit-btn">Download Resume</button>
                 </div>
             </div>
         </div>
@@ -1044,7 +1045,8 @@
             <div class="footer-content">
                 <div class="footer-col">
                     <h3>About Me</h3>
-                    <p>Front End Engineer specializing in Angular, TypeScript and Test Automation with experience in developing responsive and interactive web applications.</p>
+                    <p>Passionate Front-End Engineer with a strong command over Angular and TypeScript, specializing in crafting responsive, accessible, and performance-optimized web applications. Experienced in test automation and building scalable UI components with a focus on maintainability and user experience.
+                    </p>
                     <div class="social-links">
                         <a href="#" class="social-icon">
                             <i>in</i>
@@ -1135,6 +1137,15 @@
                 header.style.padding = '20px 0';
                 header.style.boxShadow = 'none';
             }
+        });
+        const cvBtn = document.getElementById('downloadCV');
+        cvBtn.addEventListener('click', () => {
+            const link = document.createElement('a');
+            link.href = '../najm.saqib/assets/NAJM-US-SAQIB.pdf'; // path to your CV file
+            link.download = 'Najm-Us-Saqib-Angular_Developer.pdf';  // file name for download
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         });
     </script>
 </body>
