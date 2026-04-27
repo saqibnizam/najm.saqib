@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Najm-Us-Saqib | Front End Engineer</title>
+    <!-- Fonts and Libraries -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
         
         body {
@@ -41,7 +44,9 @@
         
         /* Header Styles */
         header {
-            background-color: #2c3e50;
+            background-color: rgba(44, 62, 80, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             color: #fff;
             padding: 20px 0;
             position: fixed;
@@ -49,6 +54,7 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
         
         .header-content {
@@ -109,24 +115,28 @@
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('/api/placeholder/1200/800');
+            background: linear-gradient(135deg, #1a2a6c 0%, #b21f1f 50%, #fdbb2d 100%);
             background-size: cover;
             background-position: center;
             display: flex;
             align-items: center;
             text-align: center;
             color: #fff;
+            position: relative;
+            overflow: hidden;
         }
         
         .hero-content {
             width: 100%;
             padding: 0 20px;
+            z-index: 1;
         }
         
         .hero-content h1 {
-            font-size: 48px;
+            font-size: 64px;
             margin-bottom: 20px;
             font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
         .hero-content h2 {
@@ -322,11 +332,14 @@
 }
 
 .project-card {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -421,15 +434,19 @@
         }
         
         .education-card {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 10px;
             padding: 25px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         
         .education-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
         
         .education-icon {
@@ -557,6 +574,31 @@
         .footer-col {
             flex-basis: 30%;
             margin-bottom: 30px;
+        }
+
+        /* Back to Top Button */
+        #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            font-size: 20px;
+            border: none;
+            outline: none;
+            background-color: #e74c3c;
+            color: white;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+
+        #backToTop:hover {
+            background-color: #c0392b;
+            transform: translateY(-5px);
         }
         
         .footer-col h3 {
@@ -722,9 +764,9 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Najm Us Saqib</h1>
-                <h2>Front End Engineer</h2>
-                <p>Expert in Angular, TypeScript, and Test Automation</p>
+                <h1 data-aos="zoom-in">Najm Us Saqib</h1>
+                <h2 id="typing-text"></h2>
+                <p data-aos="fade-up" data-aos-delay="400">Expert in Angular, TypeScript, and Test Automation</p>
                 <p><i class="gray">Crafting scalable, maintainable, and high-performance user interfaces with a strong focus on quality and reliability</i></p>
                 <a href="#contact" class="hero-btn">Contact Me</a>
             </div>
@@ -734,14 +776,14 @@
     <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title" data-aos="fade-up">
                 <h2>About Me</h2>
             </div>
             <div class="about-content">
-                <div class="about-img">
+                <div class="about-img" data-aos="fade-right">
                     <img src="editprofile.jpeg" alt="Najm Us Saqib">
                 </div>
-                <div class="about-text">
+                <div class="about-text" data-aos="fade-left">
                     <h3>Front End Engineer</h3>
                     <p>I'm a professional front-end developer looking for a multinational organization to enhance my skills and contribute to the software industry. With expertise in Angular, TypeScript, and test automation, I bring a solid technical foundation and a commitment to delivering high-quality solutions.</p>
                     <p>My experience includes working as a Team Lead for frontend development teams, creating responsive web applications, and implementing automated testing solutions that improve product quality and development efficiency.</p>
@@ -800,11 +842,11 @@
     <!-- Experience Section -->
     <section id="experience" class="section" style="background-color: #f0f0f0;">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title" data-aos="fade-up">
                 <h2>Work Experience</h2>
             </div>
             <div class="timeline">
-                <div class="timeline-item">
+                <div class="timeline-item" data-aos="fade-up">
                     <div class="timeline-content">
                         <span class="timeline-date">Dec 2021 - Present</span>
                         <h3>Senior Software Engineer</h3>
@@ -813,7 +855,7 @@
                     </div>
                 </div>
                 
-                <div class="timeline-item">
+                <div class="timeline-item" data-aos="fade-up">
                     <div class="timeline-content">
                         <span class="timeline-date">Sep 2019 - Dec 2021</span>
                         <h3>Team Lead - Frontend</h3>
@@ -822,7 +864,7 @@
                     </div>
                 </div>
                 
-                <div class="timeline-item">
+                <div class="timeline-item" data-aos="fade-up">
                     <div class="timeline-content">
                         <span class="timeline-date">Sep 2019 - Dec 2021</span>
                         <h3>Front End Developer</h3>
@@ -831,7 +873,7 @@
                     </div>
                 </div>
                 
-                <div class="timeline-item">
+                <div class="timeline-item" data-aos="fade-up">
                     <div class="timeline-content">
                         <span class="timeline-date">Sep 2019 - Dec 2021</span>
                         <h3>Test Automation Engineer</h3>
@@ -847,12 +889,12 @@
     
 <section id="projects" class="section">
     <div class="container">
-        <div class="section-title">
+        <div class="section-title" data-aos="fade-up">
             <h2>Projects</h2>
             <p class="section-subtitle">Some of my recent work</p>
         </div>
         <div class="projects-grid">
-            <div class="project-card no-image">
+            <div class="project-card no-image" data-aos="zoom-in" data-aos-delay="100">
                 <div class="project-icon">
                     <span>🚕</span>
                 </div>
@@ -868,7 +910,7 @@
                 </div>
             </div>
             
-            <div class="project-card no-image">
+            <div class="project-card no-image" data-aos="zoom-in" data-aos-delay="200">
                 <div class="project-icon">
                     <span>💼</span>
                 </div>
@@ -884,7 +926,7 @@
                 </div>
             </div>
             
-            <div class="project-card no-image">
+            <div class="project-card no-image" data-aos="zoom-in" data-aos-delay="300">
                 <div class="project-icon">
                     <span>✈️</span>
                 </div>
@@ -900,7 +942,7 @@
                 </div>
             </div>
             
-            <div class="project-card no-image">
+            <div class="project-card no-image" data-aos="zoom-in" data-aos-delay="100">
                 <div class="project-icon">
                     <span>🍔</span>
                 </div>
@@ -916,7 +958,7 @@
                 </div>
             </div>
             
-            <div class="project-card no-image">
+            <div class="project-card no-image" data-aos="zoom-in" data-aos-delay="200">
                 <div class="project-icon">
                     <span>🚗</span>
                 </div>
@@ -932,7 +974,7 @@
                 </div>
             </div>
             
-            <div class="project-card no-image">
+            <div class="project-card no-image" data-aos="zoom-in" data-aos-delay="300">
                 <div class="project-icon">
                     <span>🚚</span>
                 </div>
@@ -954,12 +996,12 @@
     <!-- Education Section -->
     <section id="education" class="section" style="background-color: #f0f0f0;">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title" data-aos="fade-up">
                 <h2>Education & Certifications</h2>
             </div>
             <div class="education-grid">
 
-                <div class="education-card">
+                <div class="education-card" data-aos="zoom-in" data-aos-delay="100">
                     <div class="education-icon">
                         🎓
                     </div>
@@ -970,7 +1012,7 @@
                     </div>
                 </div>
 
-                <div class="education-card">
+                <div class="education-card" data-aos="zoom-in" data-aos-delay="200">
                     <div class="education-icon">
                         🎓
                     </div>
@@ -981,7 +1023,7 @@
                     </div>
                 </div>
                 
-                <div class="education-card">
+                <div class="education-card" data-aos="zoom-in" data-aos-delay="300">
                     <div class="education-icon">
                         📜
                     </div>
@@ -997,11 +1039,11 @@
     <!-- Contact Section -->
     <section id="contact" class="section">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title" data-aos="fade-up">
                 <h2>Contact Me</h2>
             </div>
-            <div class="contact-content">
-                <div class="contact-info">
+            <div class="contact-content" data-aos="fade-up">
+                <div class="contact-info" data-aos="fade-right">
                     <div class="contact-item">
                         <div class="contact-icon">
                             📧
@@ -1030,7 +1072,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="contact-form">
+                <div class="contact-form" data-aos="fade-left">
                     <form id="contactForm">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Your Name" required>
@@ -1095,6 +1137,9 @@
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="Go to top">↑</button>
+
     <!-- JavaScript -->
     <script>
         // Mobile Menu Toggle
@@ -1153,12 +1198,71 @@
         const cvBtn = document.getElementById('downloadCV');
         cvBtn.addEventListener('click', () => {
             const link = document.createElement('a');
-            link.href = '../najm.saqib/assets/NAJM-US-SAQIB.pdf'; // path to your CV file
+            link.href = 'assets/NAJM-US-SAQIB.pdf'; // path to your CV file
             link.download = 'Najm-Us-Saqib-Angular_Developer.pdf';  // file name for download
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
         });
+
+        // Back to Top functionality
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.style.display = 'block';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Typing Effect
+        const typingText = document.getElementById('typing-text');
+        const roles = ["Front End Engineer", "Angular Expert", "Test Automation Engineer"];
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 100;
+
+        function type() {
+            const currentRole = roles[roleIndex];
+            if (isDeleting) {
+                typingText.textContent = currentRole.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 50;
+            } else {
+                typingText.textContent = currentRole.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 100;
+            }
+
+            if (!isDeleting && charIndex === currentRole.length) {
+                isDeleting = true;
+                typeSpeed = 2000; // Pause at end
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+
+        document.addEventListener('DOMContentLoaded', type);
     </script>
 </body>
 </html>
