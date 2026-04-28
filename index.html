@@ -902,7 +902,7 @@
                     <h3>Infocabs EVOP</h3>
                     <p>Real-time cab booking app serving primarily in the UK, with web admin interface and mobile application.</p>
                     <div class="tech-stack">
-                        <span class="tech-tag">Angular v12</span>
+                        <span class="tech-tag">Angular v18</span>
                         <span class="tech-tag">Infragistics</span>
                         <span class="tech-tag">TypeScript</span>
                         <span class="tech-tag">NGXS</span>
@@ -1243,20 +1243,20 @@
             if (isDeleting) {
                 typingText.textContent = currentRole.substring(0, charIndex - 1);
                 charIndex--;
-                typeSpeed = 50;
+                typeSpeed = 30;
             } else {
                 typingText.textContent = currentRole.substring(0, charIndex + 1);
                 charIndex++;
-                typeSpeed = 100;
+                typeSpeed = 30;
             }
 
             if (!isDeleting && charIndex === currentRole.length) {
                 isDeleting = true;
-                typeSpeed = 2000; // Pause at end
+                typeSpeed = 1000; // Pause at end
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
                 roleIndex = (roleIndex + 1) % roles.length;
-                typeSpeed = 500;
+                typeSpeed = 1000;
             }
 
             setTimeout(type, typeSpeed);
