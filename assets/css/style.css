@@ -1356,3 +1356,131 @@ footer .footer-bottom {
     scroll-behavior: auto !important;
   }
 }
+
+/* ==========================================
+   PREMIUM AMBIENT BACKGROUND
+   Cerulean Blue + Neon Rose
+   ========================================== */
+
+body {
+  position: relative;
+  isolation: isolate;
+  background-color: #0A0A0A;
+}
+
+/* Animated ambient glow */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -12%;
+  z-index: -1;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at 18% 22%,
+      rgba(0, 123, 167, 0.17) 0%,
+      transparent 38%
+    ),
+    radial-gradient(
+      ellipse at 82% 62%,
+      rgba(255, 46, 136, 0.10) 0%,
+      transparent 34%
+    ),
+    radial-gradient(
+      ellipse at 48% 95%,
+      rgba(0, 123, 167, 0.08) 0%,
+      transparent 40%
+    );
+
+  filter: blur(30px);
+  transform: translate3d(0, 0, 0);
+  animation: premiumAmbientGlow 24s ease-in-out infinite alternate;
+}
+
+/* Subtle technical grid */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    );
+
+  background-size: 52px 52px;
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.45) 65%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.45) 65%,
+    transparent 100%
+  );
+}
+
+/* Smooth, slow movement */
+@keyframes premiumAmbientGlow {
+  0% {
+    transform: translate3d(-1.5%, -1%, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(1.5%, 1%, 0) scale(1.035);
+  }
+
+  100% {
+    transform: translate3d(-1%, 2%, 0) scale(1.015);
+  }
+}
+
+/* Premium glass header */
+header {
+  background-color: rgba(10, 10, 10, 0.76);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* Refined card borders */
+.project-card,
+.expertise-card,
+.about-summary-card,
+.approach-card,
+.education-card,
+.contact-info-card,
+.contact-form-card {
+  border-color: rgba(255, 255, 255, 0.07);
+}
+
+/* Keep existing hover effects; refine transitions */
+.project-card,
+.expertise-card,
+.approach-card {
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Accessibility: reduce motion when requested */
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    animation: none;
+  }
+}
+
