@@ -3,27 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Najm-Us-Saqib | Front End Engineer</title>
-    <!-- Fonts and Libraries -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Najm Us Saqib | Angular Engineer & E2E Test Automation</title>
+    <meta name="description" content="Explore Najm Us Saqib's portfolio featuring Angular engineering, real-time dispatch applications, frontend architecture, performance optimization, and end-to-end test automation.">
+    <meta name="keywords" content="Najm Us Saqib, Angular Developer, Frontend Engineer, TypeScript, NGXS, E2E Test Automation, Protractor, Real-Time Applications, Leaflet">
+    <meta name="author" content="Najm Us Saqib">
+    <link rel="canonical" href="https://saqibnizam.github.io/najm.saqib/">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://saqibnizam.github.io/najm.saqib/">
+    <meta property="og:title" content="Najm Us Saqib | Angular Engineer & E2E Test Automation">
+    <meta property="og:description" content="Frontend Engineer specializing in Angular, real-time business applications, NGXS state management, and end-to-end test automation.">
+    <meta property="og:image" content="editprofile.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://saqibnizam.github.io/najm.saqib/">
+    <meta property="twitter:title" content="Najm Us Saqib | Angular Engineer & E2E Test Automation">
+    <meta property="twitter:description" content="Frontend Engineer specializing in Angular, real-time business applications, NGXS state management, and end-to-end test automation.">
+    <meta property="twitter:image" content="editprofile.jpeg">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Najm Us Saqib",
+      "jobTitle": "Senior Frontend Engineer & E2E Test Automation Specialist",
+      "url": "https://saqibnizam.github.io/najm.saqib/",
+      "sameAs": [
+        "https://linkedin.com/in/najm-us-saqib-557164185/",
+        "https://github.com/saqibnizam"
+      ],
+      "knowsAbout": [
+        "Angular",
+        "TypeScript",
+        "NGXS",
+        "RxJS",
+        "Protractor E2E Automation",
+        "Real-Time Applications",
+        "Leaflet Maps",
+        "Frontend Architecture"
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "City University of Science and Information Technology, Peshawar"
+      }
+    }
+    </script>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
+
+    <!-- Header & Navigation -->
+    <header id="header">
         <div class="container">
             <div class="header-content">
-                <div class="logo">Najm <span>Us Saqib</span></div>
-                <div class="mobile-menu-btn">☰</div>
+                <a href="#home" class="logo">
+                    Najm <span class="logo-accent">Us Saqib</span>
+                    <span class="logo-badge">Angular Lead</span>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">☰</button>
                 <nav id="nav">
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#education">Education</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#home" class="nav-link active">Home</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#expertise" class="nav-link">Expertise</a></li>
+                        <li><a href="#automation" class="nav-link">E2E Automation</a></li>
+                        <li><a href="#projects" class="nav-link">Projects</a></li>
+                        <li><a href="#experience" class="nav-link">Experience</a></li>
+                        <li><a href="#approach" class="nav-link">How I Work</a></li>
+                        <li><a href="#credentials" class="nav-link">Credentials</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -33,122 +91,293 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1 data-aos="zoom-in">Najm Us Saqib</h1>
-                <h2 id="typing-text"></h2>
-                <p data-aos="fade-up" data-aos-delay="400">Expert in Angular, TypeScript, and Test Automation</p>
-                <p><i class="gray">Crafting scalable, maintainable, and high-performance user interfaces with a strong focus on quality and reliability</i></p>
-                <a href="#contact" class="hero-btn">Contact Me</a>
+            <div class="hero-wrapper">
+                <div class="hero-text-content">
+                    <div class="hero-greeting">Hi, I am Najm Us Saqib</div>
+                    <h1>Building Real-Time Angular Applications. Engineering Reliable Software.</h1>
+                    <div class="hero-headline">
+                        <span id="typing-text"></span>
+                    </div>
+                    <p class="hero-description">
+                        I’m a frontend-focused software engineer specializing in Angular, TypeScript, real-time business applications, and end-to-end test automation. I build responsive, maintainable interfaces for complex operational systems and help teams deliver reliable software.
+                    </p>
+
+                    <!-- Professional Strengths Badges -->
+                    <div class="hero-badges">
+                        <span class="badge-item"><span class="badge-dot"></span> Angular & TypeScript Engineering</span>
+                        <span class="badge-item"><span class="badge-dot"></span> Real-Time Application Development</span>
+                        <span class="badge-item badge-highlight"><span class="badge-dot"></span> E2E Test Automation</span>
+                        <span class="badge-item"><span class="badge-dot"></span> Frontend Architecture & Performance</span>
+                        <span class="badge-item"><span class="badge-dot"></span> Technical Leadership</span>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            Explore My Work ➔
+                        </a>
+                        <a href="assets/NAJM-US-SAQIB.pdf" download="Najm-Us-Saqib-Angular_Developer.pdf" id="heroDownloadResume" class="btn btn-rose">
+                            View Resume 📄
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            Contact Me
+                        </a>
+                        <a href="https://linkedin.com/in/najm-us-saqib-557164185/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            LinkedIn ↗
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Avatar Image Frame -->
+                <div class="hero-avatar-wrapper">
+                    <div class="avatar-frame">
+                        <img src="editprofile.jpeg" alt="Najm Us Saqib - Senior Frontend Engineer">
+                    </div>
+                    <div class="avatar-experience-badge">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Years Of Software<br>Engineering</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technology Strip -->
+        <div class="tech-strip">
+            <div class="container">
+                <div class="strip-label">CORE TECHNICAL STACK & TOOLS</div>
+                <div class="strip-grid">
+                    <span class="tech-pill"><span class="tech-icon">⚡</span> Angular v18</span>
+                    <span class="tech-pill"><span class="tech-icon">📘</span> TypeScript</span>
+                    <span class="tech-pill"><span class="tech-icon">🔄</span> NGXS State Management</span>
+                    <span class="tech-pill"><span class="tech-icon">📡</span> RxJS</span>
+                    <span class="tech-pill"><span class="tech-icon">🗺️</span> Leaflet / OpenStreetMap</span>
+                    <span class="tech-pill"><span class="tech-icon">🧪</span> Protractor E2E</span>
+                    <span class="tech-pill"><span class="tech-icon">🟢</span> Node.js</span>
+                    <span class="tech-pill"><span class="tech-icon">🎨</span> Bootstrap / SCSS</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Me Section -->
     <section id="about" class="section">
         <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>About Me</h2>
+            <div class="section-title">
+                <span class="category-badge">ABOUT ME</span>
+                <h2>Software Engineer & Frontend Specialist</h2>
+                <p>Delivering high-performance Angular applications and robust E2E test suites for complex business domains.</p>
             </div>
-            <div class="about-content">
-                <div class="about-img" data-aos="fade-right">
-                    <img src="editprofile.jpeg" alt="Najm Us Saqib">
+
+            <div class="about-grid">
+                <div class="about-summary-card">
+                    <h3>Senior Frontend Engineer & Team Lead</h3>
+                    <p>
+                        I am an experienced frontend engineer with over 5 years in the software industry, specializing in Angular, TypeScript, state management with NGXS, real-time data streaming, and automated test engineering.
+                    </p>
+                    <p>
+                        My work revolves around architecting and building high-concurrency, operational interfaces—such as real-time cab dispatch systems, flight school management portals, and logistics platforms—where interface responsiveness, state accuracy, and memory efficiency are paramount.
+                    </p>
+                    <p>
+                        Holding a Master of Science (MS) in Software Engineering, I combine academic rigor with practical engineering leadership to lead frontend development, conduct deep code reviews, resolve complex production bottlenecks, and enforce end-to-end software quality.
+                    </p>
                 </div>
-                <div class="about-text" data-aos="fade-left">
-                    <h3>Front End Engineer</h3>
-                    <p>I'm a professional front-end developer looking for a multinational organization to enhance my skills and contribute to the software industry. With expertise in Angular, TypeScript, and test automation, I bring a solid technical foundation and a commitment to delivering high-quality solutions.</p>
-                    <p>My experience includes working as a Team Lead for frontend development teams, creating responsive web applications, and implementing automated testing solutions that improve product quality and development efficiency.</p>
-                    
-                    <div class="skills">
-                        <h3>Technical Skills</h3>
-                        
-                        <div class="skill-item" data-aos="fade-left">
-                            <div class="skill-name">JavaScript / TypeScript</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%;"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item" data-aos="fade-left">
-                            <div class="skill-name">Angular 2+</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%;"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item" data-aos="fade-left">
-                            <div class="skill-name">Protractor (Test Automation)</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%;"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item" data-aos="fade-left">
-                            <div class="skill-name">REST API</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%;"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item" data-aos="fade-left">
-                            <div class="skill-name">HTML5 & CSS</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%;"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item" data-aos="fade-left">
-                            <div class="skill-name">Bootstrap / Angular Material</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%;"></div>
-                            </div>
+
+                <div class="about-highlights">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🎯</div>
+                        <div class="highlight-info">
+                            <h4>Complex Angular Applications</h4>
+                            <p>Specialized in Angular 2 through 18, modular component design, NGXS state management, and RxJS subscription optimization.</p>
                         </div>
                     </div>
-                    <button type="button" id="downloadCV" class="submit-btn">Download Resume</button>
+
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🛰️</div>
+                        <div class="highlight-info">
+                            <h4>Real-Time Dispatch & Operational Systems</h4>
+                            <p>Proven expertise building live operational dashboards, Leaflet map overlays, driver tracking, and instant state updates.</p>
+                        </div>
+                    </div>
+
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🛡️</div>
+                        <div class="highlight-info">
+                            <h4>End-to-End Test Automation</h4>
+                            <p>Automated over 1,000 complete user journey test cases using Protractor and TypeScript to prevent regressions in production.</p>
+                        </div>
+                    </div>
+
+                    <div class="highlight-card">
+                        <div class="highlight-icon">👥</div>
+                        <div class="highlight-info">
+                            <h4>Technical Leadership & Architecture</h4>
+                            <p>Experienced Frontend Team Lead managing delivery, architecture patterns, code reviews, and cross-functional team execution.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section" style="background-color: #111827;">
+    <!-- Technical Expertise Section -->
+    <section id="expertise" class="section section-darker">
         <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Work Experience</h2>
+            <div class="section-title">
+                <span class="category-badge">TECHNICAL EXPERTISE</span>
+                <h2>Engineering Disciplines & Core Stack</h2>
+                <p>Structured, production-proven technical competencies across frontend, quality, and real-time domains.</p>
             </div>
-            <div class="timeline">
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-content">
-                        <span class="timeline-date">Dec 2021 - Present</span>
-                        <h3>Senior Software Engineer</h3>
-                        <h4>Infocabs Global Ltd, Islamabad</h4>
-                        <p>Working as a Sr. Software Engineer with a primary focus on building and maintaining scalable web application interfaces using Angular. Also involved in backend development, particularly a custom Notification Service built with Node.js for handling real-time alerts and communications.</p>
+
+            <div class="expertise-grid">
+                <!-- Discipline 1 -->
+                <div class="expertise-card">
+                    <div class="expertise-header">
+                        <div class="expertise-icon">🅰️</div>
+                        <h3>Angular & Frontend Engineering</h3>
+                    </div>
+                    <div class="expertise-tags">
+                        <span class="tag">Angular v2 - v18</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">JavaScript (ES6+)</span>
+                        <span class="tag">RxJS</span>
+                        <span class="tag">NGXS State Management</span>
+                        <span class="tag">HTML5 / SCSS</span>
+                        <span class="tag">Bootstrap</span>
+                        <span class="tag">Component Architecture</span>
+                        <span class="tag">Angular Material</span>
                     </div>
                 </div>
-                
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-content">
-                        <span class="timeline-date">Sep 2019 - Dec 2021</span>
-                        <h3>Team Lead - Frontend</h3>
-                        <h4>SMSAMI Inc, Peshawar</h4>
-                        <p>Led the frontend development team, managing resources, timelines, and deliverables while contributing to technical solutions and mentoring team members.</p>
+
+                <!-- Discipline 2 -->
+                <div class="expertise-card featured-discipline">
+                    <div class="expertise-header">
+                        <div class="expertise-icon">📡</div>
+                        <h3>Real-Time Applications & Operations</h3>
+                    </div>
+                    <div class="expertise-tags">
+                        <span class="tag">Real-Time Data Streaming</span>
+                        <span class="tag">Dispatch & Operator Dashboards</span>
+                        <span class="tag">Leaflet & OpenStreetMap</span>
+                        <span class="tag">Live Vehicle / Driver Tracking</span>
+                        <span class="tag">State Synchronization</span>
+                        <span class="tag">Rendering Optimization</span>
+                        <span class="tag">Memory Leak Prevention</span>
                     </div>
                 </div>
-                
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-content">
-                        <span class="timeline-date">Sep 2019 - Dec 2021</span>
-                        <h3>Front End Developer</h3>
-                        <h4>SMSAMI Inc, Peshawar</h4>
-                        <p>Developed responsive and interactive web applications using Angular, TypeScript, and modern frontend technologies.</p>
+
+                <!-- Discipline 3 -->
+                <div class="expertise-card">
+                    <div class="expertise-header">
+                        <div class="expertise-icon">🧪</div>
+                        <h3>Quality Engineering & E2E</h3>
+                    </div>
+                    <div class="expertise-tags">
+                        <span class="tag">Protractor Automation</span>
+                        <span class="tag">End-to-End User Journeys</span>
+                        <span class="tag">Regression Test Suites</span>
+                        <span class="tag">Browser Automation</span>
+                        <span class="tag">Defect Investigation</span>
+                        <span class="tag">Test Scenario Assertions</span>
+                        <span class="tag">Release Verification</span>
                     </div>
                 </div>
-                
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-content">
-                        <span class="timeline-date">Sep 2019 - Dec 2021</span>
-                        <h3>Test Automation Engineer</h3>
-                        <h4>SMSAMI Inc, Peshawar</h4>
-                        <p>Implemented automated testing solutions using Protractor to improve software quality and development efficiency.</p>
+
+                <!-- Discipline 4 -->
+                <div class="expertise-card">
+                    <div class="expertise-header">
+                        <div class="expertise-icon">👑</div>
+                        <h3>Engineering & Leadership</h3>
+                    </div>
+                    <div class="expertise-tags">
+                        <span class="tag">Frontend Team Leadership</span>
+                        <span class="tag">UI Architecture</span>
+                        <span class="tag">Code Reviews</span>
+                        <span class="tag">Performance Diagnostics</span>
+                        <span class="tag">Subscription Lifecycle</span>
+                        <span class="tag">Sprint Planning</span>
+                        <span class="tag">Mentorship</span>
+                    </div>
+                </div>
+
+                <!-- Discipline 5 -->
+                <div class="expertise-card">
+                    <div class="expertise-header">
+                        <div class="expertise-icon">⚙️</div>
+                        <h3>Backend & Supporting Tech</h3>
+                    </div>
+                    <div class="expertise-tags">
+                        <span class="tag">Node.js (Notification Services)</span>
+                        <span class="tag">RESTful APIs</span>
+                        <span class="tag">.NET Integration</span>
+                        <span class="tag">Infragistics UI</span>
+                        <span class="tag">Git / GitHub</span>
+                        <span class="tag">JSON / Data Parsing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dedicated E2E Test Automation Section -->
+    <section id="automation" class="section">
+        <div class="container">
+            <div class="section-title">
+                <span class="category-badge">QUALITY ENGINEERING</span>
+                <h2>End-to-End Test Automation</h2>
+                <p>Validating complete business workflows to ensure release stability and eliminate regressions.</p>
+            </div>
+
+            <div class="automation-showcase">
+                <div class="automation-banner">
+                    <div class="banner-text">
+                        <h3>Automated Software Quality & Workflow Validation</h3>
+                        <p>
+                            “I approach software quality by validating complete user journeys, not just isolated components. My test automation experience helps identify regressions, verify critical workflows, and improve confidence in application releases.”
+                        </p>
+                        <p>
+                            Having written and maintained extensive Protractor test suites—including over 1,000 automated test cases for flight management and job portal applications—I bridge the gap between frontend development and robust quality engineering.
+                        </p>
+                    </div>
+
+                    <div class="about-highlights">
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🔍</div>
+                            <div class="highlight-info">
+                                <h4>1,000+ Automated E2E Test Cases</h4>
+                                <h4>Comprehensive User Journey Verification</h4>
+                            </div>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🛡️</div>
+                            <div class="highlight-info">
+                                <h4>Regression Confidence</h4>
+                                <h4>Defect Reproducibility & Fast Triage</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Workflow Diagram Steps -->
+                <div class="workflow-steps">
+                    <div class="step-card">
+                        <div class="step-number">STEP 01</div>
+                        <div class="step-title">User Journey Mapping</div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">STEP 02</div>
+                        <div class="step-title">Automated Browser Tests</div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">STEP 03</div>
+                        <div class="step-title">State Assertions</div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">STEP 04</div>
+                        <div class="step-title">Defect Detection</div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">STEP 05</div>
+                        <div class="step-title">Regression Confidence</div>
                     </div>
                 </div>
             </div>
@@ -156,207 +385,487 @@
     </section>
 
     <!-- Projects Section -->
-    
-<section id="projects" class="section">
-    <div class="container">
-        <div class="section-title" data-aos="fade-up">
-            <h2>Projects</h2>
-            <p class="section-subtitle">Some of my recent work</p>
-        </div>
-        <div class="projects-grid">
-            <div class="project-card no-image" data-aos="zoom-in" data-aos-delay="100">
-                <div class="project-icon">
-                    <span>🚕</span>
-                </div>
-                <div class="project-info">
-                    <h3>Infocabs EVOP</h3>
-                    <p>Real-time cab booking app serving primarily in the UK, with web admin interface and mobile application.</p>
-                    <div class="tech-stack" data-aos="fade-up">
-                        <span class="tech-tag">Angular v18</span>
-                        <span class="tech-tag">Infragistics</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">NGXS</span>
+    <section id="projects" class="section section-darker">
+        <div class="container">
+            <div class="section-title">
+                <span class="category-badge">PORTFOLIO</span>
+                <h2>Featured Projects</h2>
+                <p>Substantial engineering work on complex operational systems, real-time platforms, and automation suites.</p>
+            </div>
+
+            <!-- Flagship Project: EVOP -->
+            <div class="projects-featured">
+                <div class="flagship-card">
+                    <div class="flagship-header">
+                        <div>
+                            <span class="flagship-tag">FLAGSHIP PROJECT</span>
+                            <h3>Infocabs EVOP — Real-Time Taxi Dispatch and Operations Platform</h3>
+                        </div>
+                        <span class="project-role-badge">Senior Software Engineer</span>
+                    </div>
+
+                    <p class="flagship-desc">
+                        Infocabs EVOP is an enterprise-grade real-time cab booking, operator, and dispatch platform primarily serving transport operators across the United Kingdom. Built on modern Angular 18, the system manages continuous high-frequency data updates, driver location tracking, linked job allocations, and operational dispatch workflows in demanding real-time environments.
+                    </p>
+
+                    <div class="flagship-features">
+                        <div class="feature-point">
+                            <span class="bullet">❖</span>
+                            <span><strong>Real-Time State Synchronization:</strong> Engineered NGXS store architectures for continuous job and driver updates without UI blocking.</span>
+                        </div>
+                        <div class="feature-point">
+                            <span class="bullet">❖</span>
+                            <span><strong>Interactive Mapping & Tracking:</strong> Integrated Leaflet & OpenStreetMap for real-time driver tracking, map overlays, and operational dispatch grids.</span>
+                        </div>
+                        <div class="feature-point">
+                            <span class="bullet">❖</span>
+                            <span><strong>Job Allocation & Linked Workflows:</strong> Implemented distance-based driver selection, linked job management, and dynamic sorting algorithms.</span>
+                        </div>
+                        <div class="feature-point">
+                            <span class="bullet">❖</span>
+                            <span><strong>Memory & Rendering Efficiency:</strong> Optimized subscription lifecycles, DOM rendering, and memory management for continuous long-running operator sessions.</span>
+                        </div>
+                    </div>
+
+                    <div class="flagship-tech">
+                        <span class="tech-badge">Angular v18</span>
+                        <span class="tech-badge">TypeScript</span>
+                        <span class="tech-badge">NGXS State Management</span>
+                        <span class="tech-badge">Leaflet & OpenStreetMap</span>
+                        <span class="tech-badge">Infragistics Components</span>
+                        <span class="tech-badge">RxJS</span>
                     </div>
                 </div>
             </div>
-            
-            <div class="project-card no-image" data-aos="zoom-in" data-aos-delay="200">
-                <div class="project-icon">
-                    <span>💼</span>
+
+            <!-- Secondary Featured Projects Grid -->
+            <div class="projects-grid">
+                <!-- FlyawayHub -->
+                <div class="project-card">
+                    <div>
+                        <div class="card-meta">
+                            <span class="card-category">AVIATION MANAGEMENT</span>
+                            <span class="card-role">Team Contributor</span>
+                        </div>
+                        <h3>FlyawayHub — Aviation School Management Platform</h3>
+                        <p>
+                            A comprehensive aviation and flying-school management platform handling flight scheduling, student records, and operational workflows. Contributed as a core team member fixing complex UI bugs, implementing new features, and automating over 1,000 end-to-end test cases.
+                        </p>
+                        <ul class="card-highlights">
+                            <li>Automated 1,000+ Protractor E2E test scenarios for flight booking and student journeys.</li>
+                            <li>Enhanced UI responsiveness and resolved critical data binding bugs.</li>
+                            <li>Engineered maintainable Angular Material interface components.</li>
+                        </ul>
+                    </div>
+                    <div class="card-tech">
+                        <span class="tech-tag">Angular Material</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Protractor E2E</span>
+                        <span class="tech-tag">HTML5/CSS</span>
+                    </div>
                 </div>
-                <div class="project-info">
-                    <h3>Paktax</h3>
-                    <p>Application designed to help users understand and file their tax returns efficiently.</p>
-                    <div class="tech-stack" data-aos="fade-up">
-                        <span class="tech-tag">Angular v8</span>
+
+                <!-- ZiggyJobs -->
+                <div class="project-card">
+                    <div>
+                        <div class="card-meta">
+                            <span class="card-category">JOB PLATFORM & AUTOMATION</span>
+                            <span class="card-role">Test Automation Specialist</span>
+                        </div>
+                        <h3>ZiggyJobs — Job Platform & E2E Test Suite</h3>
+                        <p>
+                            An online job search portal tailored for the transportation industry in Canada. Dedicated contribution focused on establishing Protractor-based end-to-end test automation suites for browser-driven workflows, regression testing, and verification of key candidate journeys.
+                        </p>
+                        <ul class="card-highlights">
+                            <li>Implemented browser-driven automated E2E regression test suites.</li>
+                            <li>Validated candidate application workflows and recruiter portal features.</li>
+                            <li>Improved test scenario reliability and defect detection prior to releases.</li>
+                        </ul>
+                    </div>
+                    <div class="card-tech">
+                        <span class="tech-tag">Protractor E2E</span>
+                        <span class="tech-tag">Angular v7</span>
                         <span class="tech-tag">Bootstrap</span>
-                        <span class="tech-tag">TypeScript</span>
                         <span class="tech-tag">NGXS</span>
                     </div>
                 </div>
-            </div>
-            
-            <div class="project-card no-image" data-aos="zoom-in" data-aos-delay="300">
-                <div class="project-icon">
-                    <span>✈️</span>
-                </div>
-                <div class="project-info">
-                    <h3>Flyaway Hub</h3>
-                    <p>Fixed bugs, developed new features, and automated over 1000 end-to-end test cases for this platform.</p>
-                    <div class="tech-stack" data-aos="fade-up">
-                        <span class="tech-tag">Angular Material</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">HTML</span>
+
+                <!-- Motorway Express -->
+                <div class="project-card">
+                    <div>
+                        <div class="card-meta">
+                            <span class="card-category">TRANSPORT & LOGISTICS</span>
+                            <span class="card-role">Frontend Team Lead</span>
+                        </div>
+                        <h3>Motorway Express — Logistics Management</h3>
+                        <p>
+                            A professional transport and logistics software application. Served as Frontend Team Lead, managing UI architecture, Angular 13 feature delivery, component modularity, team sprint allocations, and performance maintainability.
+                        </p>
+                        <ul class="card-highlights">
+                            <li>Led the frontend team in delivering new transport management modules.</li>
+                            <li>Architected clean Angular 13 component patterns and state flows.</li>
+                            <li>Coordinated cross-functionally with backend and product engineering teams.</li>
+                        </ul>
                     </div>
-                </div>
-            </div>
-            
-            <div class="project-card no-image" data-aos="zoom-in" data-aos-delay="100">
-                <div class="project-icon">
-                    <span>🍔</span>
-                </div>
-                <div class="project-info">
-                    <h3>Ready To Munch</h3>
-                    <p>Worked as team lead, focusing on new features, application performance, and maintenance.</p>
-                    <div class="tech-stack" data-aos="fade-up">
-                        <span class="tech-tag">Angular Material</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">HTML</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card no-image" data-aos="zoom-in" data-aos-delay="200">
-                <div class="project-icon">
-                    <span>🚗</span>
-                </div>
-                <div class="project-info">
-                    <h3>Motorway Express</h3>
-                    <p>Led team for Motorway Express, working on new features, app performance, maintenance, and team management.</p>
-                    <div class="tech-stack" data-aos="fade-up">
+                    <div class="card-tech">
                         <span class="tech-tag">Angular v13</span>
                         <span class="tech-tag">Angular Material</span>
                         <span class="tech-tag">TypeScript</span>
                         <span class="tech-tag">State Management</span>
                     </div>
                 </div>
-            </div>
-            
-            <div class="project-card no-image" data-aos="zoom-in" data-aos-delay="300">
-                <div class="project-icon">
-                    <span>🚚</span>
+
+                <!-- Ready to Munch -->
+                <div class="project-card">
+                    <div>
+                        <div class="card-meta">
+                            <span class="card-category">FOOD ORDERING PLATFORM</span>
+                            <span class="card-role">Frontend Team Lead</span>
+                        </div>
+                        <h3>Ready to Munch — Food Ordering & Management</h3>
+                        <p>
+                            An online food ordering and restaurant operational management platform. Led the frontend team in implementing custom customer ordering workflows, menu configuration tools, performance optimization, and ongoing maintenance.
+                        </p>
+                        <ul class="card-highlights">
+                            <li>Managed frontend feature delivery and component optimization.</li>
+                            <li>Enhanced application rendering speeds and overall UX responsiveness.</li>
+                            <li>Maintained clean component structure and team code review standards.</li>
+                        </ul>
+                    </div>
+                    <div class="card-tech">
+                        <span class="tech-tag">Angular Material</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">CSS/SCSS</span>
+                        <span class="tech-tag">HTML5</span>
+                    </div>
                 </div>
-                <div class="project-info">
-                    <h3>ZiggyJobs</h3>
-                    <p>Online job search portal for the transportation industry in Canada, with web and mobile applications.</p>
-                    <div class="tech-stack" data-aos="fade-up">
-                        <span class="tech-tag">Angular v7</span>
+
+                <!-- Aviation MIS -->
+                <div class="project-card">
+                    <div>
+                        <div class="card-meta">
+                            <span class="card-category">ENTERPRISE SYSTEM</span>
+                            <span class="card-role">Frontend Engineer</span>
+                        </div>
+                        <h3>Aviation MIS — Management Information System</h3>
+                        <p>
+                            An Aviation Management Information System built on Angular 12 foundation, designed to provide operational reporting, fleet metrics, and decision-support dashboards for aviation administrators.
+                        </p>
+                        <ul class="card-highlights">
+                            <li>Developed analytical dashboard components and data table views.</li>
+                            <li>Integrated complex RESTful APIs and structured data models.</li>
+                            <li>Ensure accessible and responsive layouts across tablet and desktop.</li>
+                        </ul>
+                    </div>
+                    <div class="card-tech">
+                        <span class="tech-tag">Angular v12</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">REST APIs</span>
+                        <span class="tech-tag">Bootstrap</span>
+                    </div>
+                </div>
+
+                <!-- Paktax -->
+                <div class="project-card">
+                    <div>
+                        <div class="card-meta">
+                            <span class="card-category">FINTECH & TAXATION</span>
+                            <span class="card-role">Frontend Developer</span>
+                        </div>
+                        <h3>Paktax — Tax Return Filing Portal</h3>
+                        <p>
+                            A tax return estimation and filing application engineered to simplify complex tax calculations, step-by-step return submissions, and financial reporting for individuals and small businesses.
+                        </p>
+                        <ul class="card-highlights">
+                            <li>Built intuitive step-by-step tax wizard forms with real-time validation.</li>
+                            <li>Managed tax calculation state with NGXS store.</li>
+                            <li>Created responsive UI layouts with Bootstrap.</li>
+                        </ul>
+                    </div>
+                    <div class="card-tech">
+                        <span class="tech-tag">Angular v8</span>
+                        <span class="tech-tag">NGXS</span>
                         <span class="tech-tag">Bootstrap</span>
                         <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">NGXS</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- Education Section -->
-    <section id="education" class="section" style="background-color: #111827;">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Education & Certifications</h2>
-            </div>
-            <div class="education-grid">
-
-                <div class="education-card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="education-icon">
-                        🎓
-                    </div>
-                    <div class="education-info">
-                        <h3>MS-Software Engineering</h3>
-                        <h4>City University of Science and Information Technology, Peshawar</h4>
-                        <p class="education-date">CGPA: 3.50</p>
-                    </div>
-                </div>
-
-                <div class="education-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="education-icon">
-                        🎓
-                    </div>
-                    <div class="education-info">
-                        <h3>BS-Software Engineering</h3>
-                        <h4>City University of Science and Information Technology, Peshawar</h4>
-                        <p class="education-date">CGPA: 3.54</p>
-                    </div>
-                </div>
-                
-                <div class="education-card" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="education-icon">
-                        📜
-                    </div>
-                    <div class="education-info">
-                        <h3>Hafiz e Quran</h3>
-                        <p>Complete memorization of the Holy Quran</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
+    <!-- Experience Section -->
+    <section id="experience" class="section">
         <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Contact Me</h2>
+            <div class="section-title">
+                <span class="category-badge">CAREER TIMELINE</span>
+                <h2>Professional Experience</h2>
+                <p>A history of technical leadership, frontend engineering, and software quality ownership.</p>
             </div>
-            <div class="contact-content" data-aos="fade-up">
-                <div class="contact-info" data-aos="fade-right">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            📧
+
+            <div class="timeline">
+                <!-- Role 1 -->
+                <div class="timeline-item timeline-highlight">
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Senior Software Engineer</h3>
+                                <div class="company-name">Infocabs Global Ltd, Islamabad</div>
+                            </div>
+                            <span class="timeline-date">Dec 2021 - Present</span>
                         </div>
-                        <div class="contact-text">
-                            <h3>Email</h3>
-                            <p>saqibnizam5@gmail.com</p>
-                        </div>
+                        <p>
+                            Serving as Senior Software Engineer leading frontend development for EVOP—Infocabs' enterprise real-time dispatch and booking platform serving cab operators across the UK.
+                        </p>
+                        <ul>
+                            <li>Architected and scaled Angular 18 user interfaces with NGXS state management for continuous real-time dispatch streams.</li>
+                            <li>Integrated Leaflet and OpenStreetMap for interactive driver tracking, job allocation maps, and location-based sorting.</li>
+                            <li>Built a custom Node.js Notification Service handling live alerts and communication channels.</li>
+                            <li>Optimized UI memory consumption and rendering efficiency for operator systems running continuously.</li>
+                        </ul>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            📞
+                </div>
+
+                <!-- Role 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Team Lead - Frontend</h3>
+                                <div class="company-name">SMSAMI Inc, Peshawar</div>
+                            </div>
+                            <span class="timeline-date">Sep 2019 - Dec 2021</span>
                         </div>
-                        <div class="contact-text">
-                            <h3>Phone</h3>
-                            <p>+92 (342) 0192138</p>
-                        </div>
+                        <p>
+                            Led the frontend engineering team across multiple key client applications including Motorway Express and Ready to Munch.
+                        </p>
+                        <ul>
+                            <li>Managed engineering resources, delivery timelines, and frontend architecture across concurrent projects.</li>
+                            <li>Established coding standards, conduct peer code reviews, and mentored junior frontend engineers.</li>
+                            <li>Collaborated with backend engineers and product owners to translate complex business rules into modular UI components.</li>
+                        </ul>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            📍
+                </div>
+
+                <!-- Role 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Front End Developer</h3>
+                                <div class="company-name">SMSAMI Inc, Peshawar</div>
+                            </div>
+                            <span class="timeline-date">Sep 2019 - Dec 2021</span>
                         </div>
-                        <div class="contact-text">
-                            <h3>Location</h3>
-                            <p>Islamabad, Pakistan</p>
+                        <p>
+                            Developed interactive, responsive web applications utilizing Angular, TypeScript, Bootstrap, and Angular Material.
+                        </p>
+                        <ul>
+                            <li>Delivered feature updates, bug fixes, and responsive views across FlyawayHub, Paktax, and internal systems.</li>
+                            <li>Integrated REST APIs and implemented state management logic.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Role 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Test Automation Engineer</h3>
+                                <div class="company-name">SMSAMI Inc, Peshawar</div>
+                            </div>
+                            <span class="timeline-date">Sep 2019 - Dec 2021</span>
+                        </div>
+                        <p>
+                            Engineered automated end-to-end testing frameworks and suites to guarantee software release quality.
+                        </p>
+                        <ul>
+                            <li>Automated over 1,000 complete user journey test scenarios using Protractor and TypeScript for FlyawayHub.</li>
+                            <li>Created automated E2E regression test suites for ZiggyJobs to verify core candidate and recruiter journeys.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engineering Approach Section -->
+    <section id="approach" class="section section-darker">
+        <div class="container">
+            <div class="section-title">
+                <span class="category-badge">ENGINEERING METHODOLOGY</span>
+                <h2>How I Work</h2>
+                <p>Pragmatic engineering principles focused on quality, architecture stability, and predictable execution.</p>
+            </div>
+
+            <div class="approach-grid">
+                <div class="approach-card">
+                    <div class="approach-number">PRINCIPLE 01</div>
+                    <h3>Understand Architecture & Workflows First</h3>
+                    <p>I thoroughly analyze existing domain logic and UI architecture before modifying code to prevent unintended side effects in production systems.</p>
+                </div>
+
+                <div class="approach-card">
+                    <div class="approach-number">PRINCIPLE 02</div>
+                    <h3>Root-Cause Performance Tuning</h3>
+                    <p>Instead of applying speculative fixes, I diagnose memory leaks, unhandled subscriptions, and DOM re-renders at the source using profilers.</p>
+                </div>
+
+                <div class="approach-card">
+                    <div class="approach-number">PRINCIPLE 03</div>
+                    <h3>Protect Production Stability</h3>
+                    <p>I prioritize preserving stable, battle-tested production flows while introducing clean modular enhancements and feature flags.</p>
+                </div>
+
+                <div class="approach-card">
+                    <div class="approach-number">PRINCIPLE 04</div>
+                    <h3>Predictable State Flow</h3>
+                    <p>I build deterministic state streams using NGXS and RxJS, keeping state updates readable, centralized, and easy to test.</p>
+                </div>
+
+                <div class="approach-card">
+                    <div class="approach-number">PRINCIPLE 05</div>
+                    <h3>Automated Journey Verification</h3>
+                    <p>I validate critical user journeys through E2E test suites to catch regressions early before code reaches production environments.</p>
+                </div>
+
+                <div class="approach-card">
+                    <div class="approach-number">PRINCIPLE 06</div>
+                    <h3>Balanced Execution</h3>
+                    <p>I balance rapid business feature delivery with maintainable component design, clean code standards, and long-term maintainability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Credentials Section -->
+    <section id="credentials" class="section">
+        <div class="container">
+            <div class="section-title">
+                <span class="category-badge">CREDENTIALS</span>
+                <h2>Education & Resume</h2>
+                <p>Academic qualifications and professional accreditation.</p>
+            </div>
+
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="edu-icon">🎓</div>
+                    <div class="edu-details">
+                        <h3>MS in Software Engineering</h3>
+                        <h4>City University of Science and Information Technology, Peshawar</h4>
+                        <div class="edu-score">CGPA: 3.50</div>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="edu-icon">🎓</div>
+                    <div class="edu-details">
+                        <h3>BS in Software Engineering</h3>
+                        <h4>City University of Science and Information Technology, Peshawar</h4>
+                        <div class="edu-score">CGPA: 3.54</div>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="edu-icon">📜</div>
+                    <div class="edu-details">
+                        <h3>Hafiz e Quran</h3>
+                        <h4>Holy Quran Memorization</h4>
+                        <div class="edu-score">Complete Memorization</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Download Resume Banner -->
+            <div class="resume-download-banner">
+                <h3>Looking for a Detailed PDF Resume?</h3>
+                <p>Download my comprehensive professional CV detailing full employment history, project metrics, and technology expertise.</p>
+                <a href="assets/NAJM-US-SAQIB.pdf" download="Najm-Us-Saqib-Angular_Developer.pdf" id="downloadCV" class="btn btn-rose">
+                    Download Full Resume (PDF) 📄
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-darker">
+        <div class="container">
+            <div class="section-title">
+                <span class="category-badge">GET IN TOUCH</span>
+                <h2>Have a Complex Frontend Challenge?</h2>
+                <p>I’m interested in opportunities involving Angular engineering, real-time business applications, frontend performance, and software quality.</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info-card">
+                    <h3>Contact Information</h3>
+                    <p class="contact-lead">Feel free to reach out via email, phone, or LinkedIn to discuss engineering roles, real-time Angular projects, or quality engineering consultation.</p>
+
+                    <div class="contact-methods">
+                        <div class="method-item">
+                            <div class="method-icon">📧</div>
+                            <div class="method-text">
+                                <span>Email Address</span>
+                                <a href="mailto:saqibnizam5@gmail.com">saqibnizam5@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="method-item">
+                            <div class="method-icon">📞</div>
+                            <div class="method-text">
+                                <span>Phone Number</span>
+                                <a href="tel:+923420192138">+92 (342) 0192138</a>
+                            </div>
+                        </div>
+
+                        <div class="method-item">
+                            <div class="method-icon">📍</div>
+                            <div class="method-text">
+                                <span>Location</span>
+                                <strong>Islamabad, Pakistan</strong>
+                            </div>
+                        </div>
+
+                        <div class="method-item">
+                            <div class="method-icon">🔗</div>
+                            <div class="method-text">
+                                <span>LinkedIn</span>
+                                <a href="https://linkedin.com/in/najm-us-saqib-557164185/" target="_blank" rel="noopener noreferrer">linkedin.com/in/najm-us-saqib-557164185/</a>
+                            </div>
+                        </div>
+
+                        <div class="method-item">
+                            <div class="method-icon">💻</div>
+                            <div class="method-text">
+                                <span>GitHub Repository</span>
+                                <a href="https://github.com/saqibnizam" target="_blank" rel="noopener noreferrer">github.com/saqibnizam</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="contact-form" data-aos="fade-left">
+
+                <div class="contact-form-card">
                     <form id="contactForm">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" class="form-control" placeholder="John Doe" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
+                            <label for="email">Your Email *</label>
+                            <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Subject">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" placeholder="Angular Engineering Opportunity">
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" placeholder="Your Message" required></textarea>
+                            <label for="message">Message *</label>
+                            <textarea id="message" class="form-control" placeholder="Tell me about your project or opportunity..." required></textarea>
                         </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            Send Message ➔
+                        </button>
+                        <div id="formStatus" class="form-status"></div>
                     </form>
                 </div>
             </div>
@@ -367,172 +876,191 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col">
-                    <h3>About Me</h3>
-                    <p>Dynamic Front-End Engineer with deep expertise in Angular and TypeScript, dedicated to building responsive, accessible, and high-performance web applications. Skilled in test automation and the development of scalable, maintainable UI components, with a strong focus on delivering exceptional user experiences.
-                    </p>
+                <div class="footer-brand">
+                    <h3>Najm Us Saqib</h3>
+                    <p>Senior Frontend Engineer & E2E Test Automation Specialist. Engineering high-performance Angular interfaces and real-time operational platforms.</p>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/najm-us-saqib-557164185/" class="social-icon">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="30" height="30">
+                        <a href="https://linkedin.com/in/najm-us-saqib-557164185/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn">
+                            in
                         </a>
-                        <a href="mailto:saqibnizam5@gmail.com" class="social-icon">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail" width="30" height="30">
+                        <a href="https://github.com/saqibnizam" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub">
+                            GH
                         </a>
-                        <a href="https://stackoverflow.com/users/7152377/najm-us-saqib" class="social-icon">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/stackoverflow/stackoverflow-original.svg" alt="Stack Overflow" width="30" height="30">
+                        <a href="mailto:saqibnizam5@gmail.com" class="social-icon-btn" title="Email">
+                            ✉
+                        </a>
+                        <a href="https://stackoverflow.com/users/7152377/najm-us-saqib" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Stack Overflow">
+                            SO
                         </a>
                     </div>
                 </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul style="list-style: none; padding-left: 0;">
-                        <li><a style="color: white" href="#home">Home</a></li>
-                        <li><a style="color: white" href="#about">About</a></li>
-                        <li><a style="color: white" href="#experience">Experience</a></li>
-                        <li><a style="color: white" href="#projects">Projects</a></li>
-                        <li><a style="color: white" href="#education">Education</a></li>
-                        <li><a style="color: white" href="#contact">Contact</a></li>
+
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#expertise">Technical Expertise</a></li>
+                        <li><a href="#automation">E2E Automation</a></li>
+                        <li><a href="#projects">Featured Projects</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h3>Contact Info</h3>
-                    <p>Islamabad, Pakistan</p>
-                    <p>saqibnizam5@gmail.com</p>
-                    <p>+92 (342) 0192138</p>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#experience">Career Experience</a></li>
+                        <li><a href="#approach">How I Work</a></li>
+                        <li><a href="#credentials">Education & Credentials</a></li>
+                        <li><a href="#contact">Contact Me</a></li>
+                        <li><a href="assets/NAJM-US-SAQIB.pdf" download="Najm-Us-Saqib-Angular_Developer.pdf">Download Resume</a></li>
+                    </ul>
                 </div>
             </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2025 Najm Us Saqib. All Rights Reserved.</p>
+                <p>&copy; 2025 Najm Us Saqib. All Rights Reserved. Built with Angular & SCSS Precision.</p>
             </div>
         </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="backToTop" title="Go to top">↑</button>
+    <button id="backToTop" aria-label="Scroll back to top">↑</button>
 
-    <!-- JavaScript -->
+    <!-- Interactive Scripts -->
     <script>
-        // Mobile Menu Toggle
-        const menuBtn = document.querySelector('.mobile-menu-btn');
-        const nav = document.getElementById('nav');
-        
-        menuBtn.addEventListener('click', () => {
-            nav.classList.toggle('active');
-        });
-        
-        // Smooth Scrolling for Navigation Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 70,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    if (nav.classList.contains('active')) {
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const nav = document.getElementById('nav');
+
+            if (mobileMenuBtn && nav) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    nav.classList.toggle('active');
+                });
+            }
+
+            // Navigation Links active state on scroll & auto close mobile nav
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
+
+            const handleActiveNav = () => {
+                let current = '';
+                const scrollY = window.pageYOffset;
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 120;
+                    const sectionHeight = section.offsetHeight;
+                    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', handleActiveNav);
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (nav && nav.classList.contains('active')) {
                         nav.classList.remove('active');
                     }
+                });
+            });
+
+            // Header Background Effect on Scroll
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
                 }
             });
-        });
-        
-        // Form Submission
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                // Here you would typically add code to handle form submission
-                // For example, using fetch to send the data to a server
-                alert('Thank you for your message! I will get back to you soon.');
-                this.reset();
-            });
-        }
-        
-        // Scroll Effect for Header
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.style.padding = '10px 0';
-                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.style.padding = '20px 0';
-                header.style.boxShadow = 'none';
-            }
-        });
-        const cvBtn = document.getElementById('downloadCV');
-        cvBtn.addEventListener('click', () => {
-            const link = document.createElement('a');
-            link.href = 'assets/NAJM-US-SAQIB.pdf'; // path to your CV file
-            link.download = 'Najm-Us-Saqib-Angular_Developer.pdf';  // file name for download
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        });
 
-        // Back to Top functionality
-        const backToTopBtn = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopBtn.style.display = 'block';
-            } else {
-                backToTopBtn.style.display = 'none';
-            }
-        });
+            // Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+            if (backToTopBtn) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 350) {
+                        backToTopBtn.style.display = 'block';
+                    } else {
+                        backToTopBtn.style.display = 'none';
+                    }
+                });
 
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    </script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100
-        });
-
-        // Typing Effect
-        const typingText = document.getElementById('typing-text');
-        const roles = ["Front End Engineer", "Angular Expert", "Test Automation Engineer"];
-        let roleIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        let typeSpeed = 100;
-
-        function type() {
-            const currentRole = roles[roleIndex];
-            if (isDeleting) {
-                typingText.textContent = currentRole.substring(0, charIndex - 1);
-                charIndex--;
-                typeSpeed = 30;
-            } else {
-                typingText.textContent = currentRole.substring(0, charIndex + 1);
-                charIndex++;
-                typeSpeed = 30;
+                backToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
             }
 
-            if (!isDeleting && charIndex === currentRole.length) {
-                isDeleting = true;
-                typeSpeed = 1000; // Pause at end
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                roleIndex = (roleIndex + 1) % roles.length;
-                typeSpeed = 1000;
+            // Typing Effect for Hero Subtitle
+            const typingText = document.getElementById('typing-text');
+            if (typingText) {
+                const roles = [
+                    "Senior Angular Engineer",
+                    "Real-Time Systems Developer",
+                    "E2E Test Automation Engineer",
+                    "Frontend Team Lead"
+                ];
+                let roleIdx = 0;
+                let charIdx = 0;
+                let isDeleting = false;
+                let speed = 90;
+
+                function typeEffect() {
+                    const currentRole = roles[roleIdx];
+                    if (isDeleting) {
+                        typingText.textContent = currentRole.substring(0, charIdx - 1);
+                        charIdx--;
+                        speed = 40;
+                    } else {
+                        typingText.textContent = currentRole.substring(0, charIdx + 1);
+                        charIdx++;
+                        speed = 80;
+                    }
+
+                    if (!isDeleting && charIdx === currentRole.length) {
+                        isDeleting = true;
+                        speed = 1800; // Pause when role completes
+                    } else if (isDeleting && charIdx === 0) {
+                        isDeleting = false;
+                        roleIdx = (roleIdx + 1) % roles.length;
+                        speed = 400;
+                    }
+
+                    setTimeout(typeEffect, speed);
+                }
+
+                typeEffect();
             }
 
-            setTimeout(type, typeSpeed);
-        }
+            // Contact Form Handling
+            const contactForm = document.getElementById('contactForm');
+            const formStatus = document.getElementById('formStatus');
 
-        document.addEventListener('DOMContentLoaded', type);
+            if (contactForm && formStatus) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    formStatus.className = 'form-status success';
+                    formStatus.textContent = 'Thank you for reaching out! Your message has been noted.';
+                    contactForm.reset();
+                    setTimeout(() => {
+                        formStatus.className = 'form-status';
+                        formStatus.textContent = '';
+                    }, 5000);
+                });
+            }
+        });
     </script>
 </body>
 </html>
