@@ -172,20 +172,41 @@
 
                     <!-- CTA Buttons -->
                     <div class="hero-actions">
-                        <a href="#projects" class="btn btn-primary">
-                            Explore My Work ➔
+                        <a href="#projects" class="hero-cta hero-cta--primary">
+                            <span class="hero-cta__label">Explore my work</span>
+                            <span class="hero-cta__icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
                         </a>
-                        <a href="assets/NAJM-US-SAQIB.pdf" download="Najm-Us-Saqib-Angular_Developer.pdf"
-                            id="heroDownloadResume" class="btn btn-rose">
-                            View Resume 📄
+
+                        <a href="assets/NAJM-US-SAQIB.pdf" target="_blank" rel="noopener noreferrer"
+                            class="hero-cta hero-cta--resume" id="heroDownloadResume">
+                            <span class="hero-cta__icon hero-cta__icon--file" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M7 3.75h7l4.25 4.5v12H7a2 2 0 0 1-2-2v-12a2.5 2.5 0 0 1 2-2.5Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                    <path d="M14 4v5h4M8.5 13h6M8.5 16.5h6" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </span>
+                            <span class="hero-cta__label">View resume</span>
                         </a>
-                        <a href="#contact" class="btn btn-secondary">
-                            Contact Me
-                        </a>
-                        <a href="https://linkedin.com/in/najm-us-saqib-557164185/" target="_blank"
-                            rel="noopener noreferrer" class="btn btn-secondary">
-                            LinkedIn ↗
-                        </a>
+
+                        <nav class="hero-cta-links" aria-label="Contact links">
+                            <a href="#contact" class="hero-cta-link">
+                                Contact
+                                <span aria-hidden="true">↗</span>
+                            </a>
+
+                            <a href="https://linkedin.com/in/najm-us-saqib-557164185/" target="_blank"
+                                rel="noopener noreferrer" class="hero-cta-link">
+                                LinkedIn
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                        </nav>
                     </div>
                 </div>
 
@@ -207,14 +228,91 @@
             <div class="container">
                 <div class="strip-label">CORE TECHNICAL STACK & TOOLS</div>
                 <div class="strip-grid">
-                    <span class="tech-pill"><span class="tech-icon">⚡</span> Angular v18</span>
-                    <span class="tech-pill"><span class="tech-icon">📘</span> TypeScript</span>
-                    <span class="tech-pill"><span class="tech-icon">🔄</span> NGXS State Management</span>
-                    <span class="tech-pill"><span class="tech-icon">📡</span> RxJS</span>
-                    <span class="tech-pill"><span class="tech-icon">🗺️</span> Leaflet / OpenStreetMap</span>
-                    <span class="tech-pill"><span class="tech-icon">🧪</span> Protractor E2E</span>
-                    <span class="tech-pill"><span class="tech-icon">🟢</span> Node.js</span>
-                    <span class="tech-pill"><span class="tech-icon">🎨</span> Bootstrap / SCSS</span>
+                    <span class="tech-pill">
+                        <svg xmlns="http://w3.org" viewBox="0 0 1200 1200" width="24" height="24">
+                            <path fill="#F40088"
+                                d="M600 77.2L124.7 351.6l74.1 556.7L600 1122.8l401.2-214.5 74.1-556.7z" />
+                            <path fill="#E4003A" d="M600 77.2v1045.6l401.2-214.5 74.1-556.7z" />
+                            <path fill="#FFF"
+                                d="M600 274.5L363.3 801.3h87.1l52.4-131.6h194.4l52.4 131.6h87.1L600 274.5zm96 331.4H504l48-120.6 48 120.6z" />
+                        </svg>
+                        Angular v22</span>
+
+                    <span class="tech-pill">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="24" height="24">
+                            <path fill="#3178C6" d="M2 2h124v124H2z" />
+                            <path fill="#FFF"
+                                d="M73 98V85h18V41H73V28h49v13h-18v44h18v13zM56 41c-2-2-6-4-11-4-7 0-11 3-11 8 0 4 3 6 12 9 14 4 20 10 20 22 0 14-10 23-27 23-9 0-18-3-24-8l6-13c5 5 12 8 19 8 7 0 11-3 11-8 0-4-3-7-13-10C25 64 20 59 20 48c0-13 10-22 26-22 8 0 15 2 20 6z" />
+                        </svg>
+                        TypeScript
+                    </span>
+
+                    <span class="tech-pill">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24">
+                            <path fill="#6F42C1" d="M128 8 8 128l120 120 120-120z" />
+                            <path fill="#FFF" d="M128 36 36 128l92 92 92-92z" />
+                            <path fill="#6F42C1" d="m128 67 61 61-61 61-61-61z" />
+                            <path fill="#FFF"
+                                d="M113 102h30v12h-9v28c0 10-7 16-17 16-11 0-18-6-18-16v-9h13v8c0 4 2 6 5 6s5-2 5-6v-27h-9z" />
+                        </svg>
+                        NGXS State Management
+                    </span>
+
+                    <span class="tech-pill">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24">
+                            <circle cx="128" cy="128" r="120" fill="#E23237" />
+                            <path fill="#FFF" d="M128 35 43 190h28l18-34h78l18 34h28zm0 51 27 49h-54z" />
+                        </svg>
+                        RxJS
+                    </span>
+
+                    <span class="tech-pill">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24">
+                            <path fill="#199900"
+                                d="M128 8c-34 0-62 28-62 62 0 24 14 44 34 54l-9 38 37-22c34 0 62-28 62-62S162 8 128 8z" />
+                            <path fill="#FFF"
+                                d="M128 29c-23 0-42 19-42 42 0 15 8 29 21 36l-5 20 20-12c26 4 49-16 49-44 0-23-19-42-43-42zm-22 29h12v29h-12zm24 0h12v29h-12z" />
+                        </svg>
+                        Leaflet / OpenStreetMap
+                    </span>
+
+                    <span class="tech-pill">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24">
+                            <path fill="#007ACC" d="M128 8 8 68v120l120 60 120-60V68z" />
+                            <path fill="#FFF" d="M128 34 34 81v94l94 47 94-47V81z" />
+                            <path fill="#007ACC" d="m128 60 68 34v68l-68 34-68-34V94z" />
+                            <path fill="#FFF" d="M93 111h70v12h-27v42h-16v-42H93z" />
+                        </svg>
+                        Protractor E2E
+                    </span>
+
+                    <span class="tech-pill">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24">
+                            <path fill="#539E43" d="M128 8 20 70v116l108 62 108-62V70z" />
+                            <path fill="#FFF" d="M128 31 41 81v94l87 50 87-50V81z" />
+                            <path fill="#539E43" d="m128 55 65 38v70l-65 38-65-38V93z" />
+                            <path fill="#FFF" d="M111 99h34v12h-11v36h-12v-36h-11z" />
+                        </svg>
+                        Node.js
+                    </span>
+
+                    <span class="tech-pill">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24">
+                            <path fill="#7952B3" d="M8 8h240v240H8z" />
+                            <path fill="#FFF"
+                                d="M40 57h85c36 0 57 17 57 46 0 18-9 31-25 38 22 6 34 21 34 44 0 33-25 51-66 51H40zm36 29v43h44c17 0 26-7 26-22s-9-21-26-21zm0 71v49h49c20 0 30-8 30-24s-10-25-30-25z" />
+                        </svg>
+                        Bootstrap
+                    </span>
+
+                    <span class="tech-pill">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="24" height="24">
+                            <path fill="#CD6799" d="M64 4C31 4 4 31 4 64s27 60 60 60 60-27 60-60S97 4 64 4z" />
+                            <path fill="#FFF"
+                                d="M89 35c-14 0-24 15-31 30-5 10-11 25-17 25-3 0-4-3-4-6 0-13 11-33 11-41 0-5-3-8-8-8-7 0-15 7-20 15l5 3c4-5 8-9 11-9 1 0 2 1 2 2 0 6-12 26-12 39 0 9 5 14 13 14 13 0 21-17 28-31 7-13 14-26 22-26 3 0 4 2 4 4 0 6-8 13-8 20 0 5 3 8 8 8 7 0 14-6 19-13l-5-3c-4 5-8 8-11 8-1 0-2-1-2-2 0-4 9-13 9-22 0-8-5-13-14-13z" />
+                        </svg>
+                        SCSS
+                    </span>
                 </div>
             </div>
         </div>
@@ -255,7 +353,7 @@
                         <div class="highlight-icon">🎯</div>
                         <div class="highlight-info">
                             <h4>Complex Angular Applications</h4>
-                            <p>Specialized in Angular 2 through 18, modular component design, NGXS state management, and
+                            <p>Specialized in Angular 2 through 22, modular component design, NGXS state management, and
                                 RxJS subscription optimization.</p>
                         </div>
                     </div>
@@ -309,7 +407,7 @@
                         <h3>Angular & Frontend Engineering</h3>
                     </div>
                     <div class="expertise-tags">
-                        <span class="tag">Angular v2 - v18</span>
+                        <span class="tag">Angular v2 - v22</span>
                         <span class="tag">TypeScript</span>
                         <span class="tag">JavaScript (ES6+)</span>
                         <span class="tag">RxJS</span>
@@ -484,7 +582,7 @@
 
                     <p class="flagship-desc">
                         Infocabs EVOP is an enterprise-grade real-time cab booking, operator, and dispatch platform
-                        primarily serving transport operators across the United Kingdom. Built on modern Angular 18, the
+                        primarily serving transport operators across the United Kingdom. Built on modern Angular 22, the
                         system manages continuous high-frequency data updates, driver location tracking, linked job
                         allocations, and operational dispatch workflows in demanding real-time environments.
                     </p>
@@ -513,7 +611,7 @@
                     </div>
 
                     <div class="flagship-tech">
-                        <span class="tech-badge">Angular v18</span>
+                        <span class="tech-badge">Angular v22</span>
                         <span class="tech-badge">TypeScript</span>
                         <span class="tech-badge">NGXS State Management</span>
                         <span class="tech-badge">Leaflet & OpenStreetMap</span>
@@ -707,7 +805,7 @@
                         <div class="timeline-header">
                             <div>
                                 <h3>Senior Software Engineer</h3>
-                                <div class="company-name">Infocabs Global Ltd, Islamabad</div>
+                                <div class="company-name">Infocabs Global Ltd. — A DG Group Company, UK</div>
                             </div>
                             <span class="timeline-date">Dec 2021 - Present</span>
                         </div>
@@ -716,7 +814,7 @@
                             enterprise real-time dispatch and booking platform serving cab operators across the UK.
                         </p>
                         <ul>
-                            <li>Architected and scaled Angular 18 user interfaces with NGXS state management for
+                            <li>Architected and scaled Angular 22 user interfaces with NGXS state management for
                                 continuous real-time dispatch streams.</li>
                             <li>Integrated Leaflet and OpenStreetMap for interactive driver tracking, job allocation
                                 maps, and location-based sorting.</li>
