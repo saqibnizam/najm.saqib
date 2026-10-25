@@ -9,6 +9,18 @@
     <meta name="author" content="Najm Us Saqib">
     <link rel="canonical" href="https://saqibnizam.github.io/najm.saqib/">
 
+    <!-- Early Theme Script Initialization to prevent flash of unstyled theme -->
+    <script>
+        (function() {
+            try {
+                var savedTheme = localStorage.getItem('portfolio-theme') || 'midnight-blue';
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            } catch (e) {
+                document.documentElement.setAttribute('data-theme', 'midnight-blue');
+            }
+        })();
+    </script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,20 +82,48 @@
                     Najm <span class="logo-accent">Us Saqib</span>
                     <span class="logo-badge">Angular Lead</span>
                 </a>
+
+                <div class="nav-container" id="nav">
+                    <nav>
+                        <ul>
+                            <li><a href="#home" class="nav-link active">Home</a></li>
+                            <li><a href="#about" class="nav-link">About</a></li>
+                            <li><a href="#expertise" class="nav-link">Expertise</a></li>
+                            <li><a href="#automation" class="nav-link">E2E Automation</a></li>
+                            <li><a href="#projects" class="nav-link">Projects</a></li>
+                            <li><a href="#experience" class="nav-link">Experience</a></li>
+                            <li><a href="#approach" class="nav-link">How I Work</a></li>
+                            <li><a href="#credentials" class="nav-link">Credentials</a></li>
+                            <li><a href="#contact" class="nav-link">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- Persistent Theme Switcher Dock -->
+                    <div class="theme-switcher-dock" role="radiogroup" aria-label="Choose portfolio theme">
+                        <button class="theme-btn" data-theme-id="midnight-blue" title="Midnight Navy — Electric Blue" aria-label="Midnight Navy Electric Blue theme" role="radio">
+                            <span class="swatch swatch-midnight"></span>
+                            <span class="theme-label">Midnight</span>
+                        </button>
+                        <button class="theme-btn" data-theme-id="charcoal-emerald" title="Charcoal — Emerald Green" aria-label="Charcoal Emerald Green theme" role="radio">
+                            <span class="swatch swatch-charcoal"></span>
+                            <span class="theme-label">Charcoal</span>
+                        </button>
+                        <button class="theme-btn" data-theme-id="purple-violet" title="Deep Purple — Violet" aria-label="Deep Purple Violet theme" role="radio">
+                            <span class="swatch swatch-purple"></span>
+                            <span class="theme-label">Purple</span>
+                        </button>
+                        <button class="theme-btn" data-theme-id="graphite-cyan" title="Graphite — Cyan" aria-label="Graphite Cyan theme" role="radio">
+                            <span class="swatch swatch-graphite"></span>
+                            <span class="theme-label">Graphite</span>
+                        </button>
+                        <button class="theme-btn" data-theme-id="black-cerulean-rose" title="Jet Black — Cerulean Blue — Neon Rose" aria-label="Jet Black Cerulean Rose theme" role="radio">
+                            <span class="swatch swatch-black"></span>
+                            <span class="theme-label">Jet Black</span>
+                        </button>
+                    </div>
+                </div>
+
                 <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">☰</button>
-                <nav id="nav">
-                    <ul>
-                        <li><a href="#home" class="nav-link active">Home</a></li>
-                        <li><a href="#about" class="nav-link">About</a></li>
-                        <li><a href="#expertise" class="nav-link">Expertise</a></li>
-                        <li><a href="#automation" class="nav-link">E2E Automation</a></li>
-                        <li><a href="#projects" class="nav-link">Projects</a></li>
-                        <li><a href="#experience" class="nav-link">Experience</a></li>
-                        <li><a href="#approach" class="nav-link">How I Work</a></li>
-                        <li><a href="#credentials" class="nav-link">Credentials</a></li>
-                        <li><a href="#contact" class="nav-link">Contact</a></li>
-                    </ul>
-                </nav>
             </div>
         </div>
     </header>
@@ -930,6 +970,35 @@
     <!-- Interactive Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Theme Switcher Functionality
+            const themeButtons = document.querySelectorAll('.theme-btn');
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'midnight-blue';
+
+            function updateActiveThemeButton(themeId) {
+                themeButtons.forEach(btn => {
+                    if (btn.getAttribute('data-theme-id') === themeId) {
+                        btn.classList.add('active');
+                        btn.setAttribute('aria-checked', 'true');
+                    } else {
+                        btn.classList.remove('active');
+                        btn.setAttribute('aria-checked', 'false');
+                    }
+                });
+            }
+
+            updateActiveThemeButton(currentTheme);
+
+            themeButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const themeId = btn.getAttribute('data-theme-id');
+                    document.documentElement.setAttribute('data-theme', themeId);
+                    try {
+                        localStorage.setItem('portfolio-theme', themeId);
+                    } catch (e) {}
+                    updateActiveThemeButton(themeId);
+                });
+            });
+
             // Mobile Menu Toggle
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const nav = document.getElementById('nav');
