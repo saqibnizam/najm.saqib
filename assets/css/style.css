@@ -1487,87 +1487,428 @@ footer .footer-bottom {
 }
 
 /* SPECIFIC THEME LAYOUT & DESIGN LANGUAGE VARIATIONS */
-/* 1. Charcoal Emerald: Minimal Architectural Language */
-[data-theme=charcoal-emerald] .section-title h2::after {
-  height: 1px;
-  width: 100px;
+/* ==========================================
+   THEME 1: Midnight Navy — Corporate Enterprise
+   ========================================== */
+[data-theme=midnight-blue] {
+  /* Refined corporate engineering look with structured 2-column layout */
 }
-[data-theme=charcoal-emerald] .project-card, [data-theme=charcoal-emerald] .flagship-card, [data-theme=charcoal-emerald] .expertise-card, [data-theme=charcoal-emerald] .about-summary-card, [data-theme=charcoal-emerald] .timeline-card {
-  border-radius: 2px;
-  border-width: 1px;
-  box-shadow: none;
+[data-theme=midnight-blue] .hero-avatar-wrapper .avatar-frame {
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(11, 16, 32, 0.8), 0 0 20px rgba(59, 130, 246, 0.2);
 }
-[data-theme=charcoal-emerald] .btn {
-  border-radius: 2px !important;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+[data-theme=midnight-blue] .project-card, [data-theme=midnight-blue] .flagship-card, [data-theme=midnight-blue] .expertise-card, [data-theme=midnight-blue] .about-summary-card, [data-theme=midnight-blue] .timeline-card {
+  border-radius: 12px;
+  border: 1px solid rgba(59, 130, 246, 0.18);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
-[data-theme=charcoal-emerald] .badge-item {
-  border-radius: 2px;
+[data-theme=midnight-blue] .btn {
+  border-radius: 8px;
 }
 
-/* 2. Purple Violet: Luminous Creative Language */
+/* ==========================================
+   THEME 2: Charcoal Emerald — Minimal Editorial Architecture
+   ========================================== */
+[data-theme=charcoal-emerald] {
+  /* Editorial left-aligned layout, flat borders, full-width row project list */
+}
+[data-theme=charcoal-emerald] .section-title {
+  text-align: left;
+  margin-bottom: 40px;
+}
+[data-theme=charcoal-emerald] .section-title .category-badge {
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: var(--accent-primary);
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+[data-theme=charcoal-emerald] .section-title .category-badge::before {
+  content: "— ";
+}
+[data-theme=charcoal-emerald] .section-title h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+[data-theme=charcoal-emerald] .section-title h2::after {
+  left: 0;
+  transform: none;
+  width: 40px;
+  height: 1px;
+  background: var(--accent-primary);
+}
+[data-theme=charcoal-emerald] .section-title p {
+  margin-left: 0;
+}
+[data-theme=charcoal-emerald] {
+  /* Transform Projects Grid into Editorial Row List */
+}
+[data-theme=charcoal-emerald] .projects-grid {
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 1px solid var(--border-subtle);
+}
+[data-theme=charcoal-emerald] .project-card {
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid var(--border-subtle);
+  background: transparent;
+  padding: 32px 0;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+[data-theme=charcoal-emerald] .project-card:hover {
+  transform: none;
+  box-shadow: none;
+  background: rgba(52, 211, 153, 0.02);
+  border-bottom-color: var(--accent-primary);
+}
+[data-theme=charcoal-emerald] .project-card .card-meta {
+  order: 1;
+}
+[data-theme=charcoal-emerald] .project-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+[data-theme=charcoal-emerald] .flagship-card {
+  border-radius: 0;
+  border: 1px solid var(--border-subtle);
+  background: transparent;
+  box-shadow: none;
+}
+[data-theme=charcoal-emerald] .flagship-card::before {
+  width: 2px;
+  background: var(--accent-primary);
+}
+[data-theme=charcoal-emerald] {
+  /* Table / Structured Row Experience Layout instead of Timeline Dot Line */
+}
+[data-theme=charcoal-emerald] .timeline::before {
+  display: none;
+}
+[data-theme=charcoal-emerald] .timeline-item {
+  padding-left: 0;
+  margin-bottom: 24px;
+}
+[data-theme=charcoal-emerald] .timeline-item::before {
+  display: none;
+}
+[data-theme=charcoal-emerald] .timeline-item .timeline-card {
+  border-radius: 0;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface-1);
+  box-shadow: none;
+  padding: 24px 30px;
+}
+[data-theme=charcoal-emerald] .timeline-item .timeline-card:hover {
+  transform: none;
+  border-color: var(--accent-primary);
+}
+[data-theme=charcoal-emerald] {
+  /* Minimalist Zero-Radius Components */
+}
+[data-theme=charcoal-emerald] .btn, [data-theme=charcoal-emerald] .badge-item, [data-theme=charcoal-emerald] .tech-pill, [data-theme=charcoal-emerald] .tag, [data-theme=charcoal-emerald] .tech-tag, [data-theme=charcoal-emerald] .tech-badge, [data-theme=charcoal-emerald] .expertise-card, [data-theme=charcoal-emerald] .about-summary-card, [data-theme=charcoal-emerald] .avatar-frame, [data-theme=charcoal-emerald] .step-card, [data-theme=charcoal-emerald] .education-card, [data-theme=charcoal-emerald] .contact-info-card, [data-theme=charcoal-emerald] .contact-form-card, [data-theme=charcoal-emerald] .form-control {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+[data-theme=charcoal-emerald] .hero-avatar-wrapper .avatar-frame {
+  border: 1px solid var(--border-medium);
+  filter: grayscale(30%);
+}
+[data-theme=charcoal-emerald] .hero-avatar-wrapper .avatar-experience-badge {
+  border-radius: 0;
+  box-shadow: none;
+  border: 1px solid var(--border-medium);
+}
+
+/* ==========================================
+   THEME 3: Deep Purple & Violet — Creative Immersive AI-Visual
+   ========================================== */
+[data-theme=purple-violet] {
+  /* Asymmetric floating layout with luminous soft glass & circular elements */
+}
 [data-theme=purple-violet] .hero {
   position: relative;
+  overflow: hidden;
 }
 [data-theme=purple-violet] .hero::after {
   content: "";
   position: absolute;
-  top: 20%;
-  right: 10%;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(167, 139, 250, 0.25) 0%, transparent 70%);
+  top: 15%;
+  right: 5%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.22) 0%, rgba(244, 114, 182, 0.1) 50%, transparent 70%);
   pointer-events: none;
-  filter: blur(40px);
+  filter: blur(60px);
+  z-index: 0;
 }
-[data-theme=purple-violet] .project-card, [data-theme=purple-violet] .flagship-card, [data-theme=purple-violet] .expertise-card {
-  backdrop-filter: blur(10px);
+[data-theme=purple-violet] {
+  /* Circular Luminous Hero Avatar Frame */
+}
+[data-theme=purple-violet] .hero-avatar-wrapper .avatar-frame {
+  border-radius: 50%;
+  width: 320px;
+  height: 320px;
+  border: 2px solid rgba(167, 139, 250, 0.4);
+  box-shadow: 0 0 50px rgba(167, 139, 250, 0.3), inset 0 0 20px rgba(167, 139, 250, 0.2);
+}
+[data-theme=purple-violet] .hero-avatar-wrapper .avatar-frame img {
+  border-radius: 50%;
+}
+[data-theme=purple-violet] .hero-avatar-wrapper .avatar-experience-badge {
+  border-radius: 30px;
+  background: rgba(33, 24, 51, 0.9);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--accent-primary);
+  box-shadow: 0 10px 30px rgba(167, 139, 250, 0.3);
+}
+[data-theme=purple-violet] {
+  /* Floating Glassmorphism Cards */
+}
+[data-theme=purple-violet] .project-card, [data-theme=purple-violet] .flagship-card, [data-theme=purple-violet] .expertise-card, [data-theme=purple-violet] .about-summary-card, [data-theme=purple-violet] .automation-showcase {
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgba(33, 24, 51, 0.85) 0%, rgba(44, 31, 69, 0.6) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(167, 139, 250, 0.25);
+  box-shadow: 0 20px 40px rgba(16, 13, 26, 0.6);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
-[data-theme=purple-violet] .btn-primary {
-  background: linear-gradient(135deg, #A78BFA 0%, #8B5CF6 100%) !important;
+[data-theme=purple-violet] .project-card:hover, [data-theme=purple-violet] .flagship-card:hover, [data-theme=purple-violet] .expertise-card:hover, [data-theme=purple-violet] .about-summary-card:hover, [data-theme=purple-violet] .automation-showcase:hover {
+  transform: translateY(-8px) scale(1.01);
+  border-color: var(--accent-primary);
+  box-shadow: 0 25px 50px rgba(167, 139, 250, 0.25);
+}
+[data-theme=purple-violet] {
+  /* Rounded Pill Bubbles for Tags & Tech */
+}
+[data-theme=purple-violet] .tag, [data-theme=purple-violet] .tech-pill, [data-theme=purple-violet] .tech-badge, [data-theme=purple-violet] .tech-tag, [data-theme=purple-violet] .badge-item {
+  border-radius: 30px;
+  padding: 6px 16px;
+  background: rgba(167, 139, 250, 0.12);
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  color: var(--text-primary);
+}
+[data-theme=purple-violet] .btn {
+  border-radius: 30px;
+  font-weight: 600;
+}
+[data-theme=purple-violet] .btn.btn-primary {
+  background: linear-gradient(135deg, #A78BFA 0%, #8B5CF6 100%);
+  box-shadow: 0 8px 25px rgba(167, 139, 250, 0.4);
+}
+[data-theme=purple-violet] .btn.btn-primary:hover {
+  box-shadow: 0 12px 35px rgba(167, 139, 250, 0.6);
+}
+[data-theme=purple-violet] {
+  /* Glowing Purple Timeline Nodes */
+}
+[data-theme=purple-violet] .timeline::before {
+  background: linear-gradient(180deg, #A78BFA 0%, #F472B6 100%);
+  width: 3px;
+  box-shadow: 0 0 12px rgba(167, 139, 250, 0.6);
+}
+[data-theme=purple-violet] .timeline-item::before {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 16px var(--accent-primary-light);
+}
+[data-theme=purple-violet] .timeline-card {
+  border-radius: 20px;
+  background: rgba(33, 24, 51, 0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(167, 139, 250, 0.2);
 }
 
-/* 3. Graphite Cyan: Precise Technical Language */
-[data-theme=graphite-cyan] h1, [data-theme=graphite-cyan] h2, [data-theme=graphite-cyan] h3, [data-theme=graphite-cyan] .logo, [data-theme=graphite-cyan] .category-badge, [data-theme=graphite-cyan] .nav-link {
-  letter-spacing: -0.2px;
+/* ==========================================
+   THEME 4: Graphite Cyan — Technical IDE & Dev Tool
+   ========================================== */
+[data-theme=graphite-cyan] {
+  /* Technical typography, IDE window headers, sharp corners, bracket tags */
 }
-[data-theme=graphite-cyan] .project-card, [data-theme=graphite-cyan] .flagship-card, [data-theme=graphite-cyan] .expertise-card, [data-theme=graphite-cyan] .about-summary-card, [data-theme=graphite-cyan] .timeline-card {
+[data-theme=graphite-cyan] body {
+  font-family: var(--font-body);
+}
+[data-theme=graphite-cyan] h1, [data-theme=graphite-cyan] h2, [data-theme=graphite-cyan] h3, [data-theme=graphite-cyan] h4, [data-theme=graphite-cyan] .logo, [data-theme=graphite-cyan] .category-badge, [data-theme=graphite-cyan] .nav-link, [data-theme=graphite-cyan] .btn {
+  font-family: var(--font-mono);
+}
+[data-theme=graphite-cyan] .section-title .category-badge {
   border-radius: 4px;
-  border: 1px solid rgba(34, 211, 238, 0.2);
+  background: rgba(34, 211, 238, 0.08);
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  color: var(--accent-primary);
+}
+[data-theme=graphite-cyan] .section-title .category-badge::before {
+  content: "// ";
+}
+[data-theme=graphite-cyan] .section-title h2 {
+  font-size: 32px;
+  letter-spacing: -0.8px;
+}
+[data-theme=graphite-cyan] {
+  /* Terminal IDE Window Bar Header for Cards */
+}
+[data-theme=graphite-cyan] .project-card, [data-theme=graphite-cyan] .flagship-card, [data-theme=graphite-cyan] .expertise-card, [data-theme=graphite-cyan] .about-summary-card, [data-theme=graphite-cyan] .automation-showcase, [data-theme=graphite-cyan] .timeline-card {
+  border-radius: 4px;
+  border: 1px solid var(--border-medium);
   position: relative;
+  background: #181E24;
 }
-[data-theme=graphite-cyan] .project-card::after, [data-theme=graphite-cyan] .flagship-card::after, [data-theme=graphite-cyan] .expertise-card::after, [data-theme=graphite-cyan] .about-summary-card::after, [data-theme=graphite-cyan] .timeline-card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 8px;
-  height: 8px;
-  border-top: 2px solid var(--accent-primary);
-  border-right: 2px solid var(--accent-primary);
+[data-theme=graphite-cyan] .project-card::before, [data-theme=graphite-cyan] .flagship-card::before, [data-theme=graphite-cyan] .expertise-card::before, [data-theme=graphite-cyan] .about-summary-card::before, [data-theme=graphite-cyan] .automation-showcase::before, [data-theme=graphite-cyan] .timeline-card::before {
+  content: "● ● ●  file.ts";
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent-primary);
+  letter-spacing: 2px;
+  padding: 6px 14px;
+  background: #20272E;
+  border-bottom: 1px solid var(--border-subtle);
+  margin: -28px -28px 20px -28px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
-[data-theme=graphite-cyan] .tag, [data-theme=graphite-cyan] .tech-pill, [data-theme=graphite-cyan] .tech-badge, [data-theme=graphite-cyan] .tech-tag {
+[data-theme=graphite-cyan] .flagship-card::before {
+  margin: -36px -36px 24px -36px;
+  content: "● ● ●  flagship_dispatch_system.ts";
+}
+[data-theme=graphite-cyan] .about-summary-card::before {
+  content: "● ● ●  engineer_profile.json";
+}
+[data-theme=graphite-cyan] .timeline-card::before {
+  content: "● ● ●  career_history.log";
+}
+[data-theme=graphite-cyan] {
+  /* Bracketed Monospace Tags */
+}
+[data-theme=graphite-cyan] .tech-tag, [data-theme=graphite-cyan] .tag, [data-theme=graphite-cyan] .tech-pill, [data-theme=graphite-cyan] .tech-badge, [data-theme=graphite-cyan] .badge-item {
   font-family: var(--font-mono);
   font-size: 12px;
+  border-radius: 3px;
+  background: rgba(34, 211, 238, 0.06);
+  border: 1px solid rgba(34, 211, 238, 0.25);
+  color: var(--accent-primary-light);
+}
+[data-theme=graphite-cyan] .tech-tag::before, [data-theme=graphite-cyan] .tag::before, [data-theme=graphite-cyan] .tech-pill::before, [data-theme=graphite-cyan] .tech-badge::before, [data-theme=graphite-cyan] .badge-item::before {
+  content: "[ ";
+  color: var(--accent-primary);
+}
+[data-theme=graphite-cyan] .tech-tag::after, [data-theme=graphite-cyan] .tag::after, [data-theme=graphite-cyan] .tech-pill::after, [data-theme=graphite-cyan] .tech-badge::after, [data-theme=graphite-cyan] .badge-item::after {
+  content: " ]";
+  color: var(--accent-primary);
+}
+[data-theme=graphite-cyan] .btn {
+  border-radius: 4px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+[data-theme=graphite-cyan] .hero-avatar-wrapper .avatar-frame {
+  border-radius: 4px;
+  border: 1px solid var(--accent-primary);
+}
+[data-theme=graphite-cyan] .hero-avatar-wrapper .avatar-frame::after {
+  content: "FRAME_INSPECT: OK";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--accent-primary);
+  background: rgba(17, 20, 24, 0.85);
+  padding: 2px 6px;
+  border-radius: 2px;
+  border: 1px solid var(--border-subtle);
+}
+[data-theme=graphite-cyan] .hero-avatar-wrapper .avatar-experience-badge {
+  border-radius: 4px;
+  border: 1px solid var(--accent-primary);
+  font-family: var(--font-mono);
 }
 
-/* 4. Jet Black Cerulean Rose: Bold Brand & Glassmorphism Language */
-[data-theme=black-cerulean-rose] .header {
-  background: rgba(10, 10, 12, 0.75) !important;
+/* ==========================================
+   THEME 5: Jet Black — Cerulean Blue & Neon Rose
+   ========================================== */
+[data-theme=black-cerulean-rose] {
+  /* High-contrast modern brand with split dual-color gradient headings & glass depth */
+}
+[data-theme=black-cerulean-rose] .hero-text-content h1 {
+  background: linear-gradient(135deg, #FFFFFF 25%, #007BA7 65%, #FF2E88 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+[data-theme=black-cerulean-rose] .section-title h2 {
+  background: linear-gradient(135deg, #F5F5F7 30%, #FF2E88 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+[data-theme=black-cerulean-rose] .section-title h2::after {
+  background: linear-gradient(90deg, #007BA7 0%, #FF2E88 100%);
+  height: 4px;
+  width: 80px;
+}
+[data-theme=black-cerulean-rose] {
+  /* Multi-layered Glassmorphism with Dual Gradient Borders */
 }
 [data-theme=black-cerulean-rose] .flagship-card, [data-theme=black-cerulean-rose] .automation-showcase {
-  background: linear-gradient(135deg, rgba(23, 25, 31, 0.8) 0%, rgba(32, 35, 43, 0.6) 100%);
+  background: linear-gradient(135deg, rgba(23, 25, 31, 0.9) 0%, rgba(32, 35, 43, 0.7) 100%);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 46, 136, 0.25);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 46, 136, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 123, 167, 0.15);
 }
 [data-theme=black-cerulean-rose] .project-card {
-  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  background: rgba(23, 25, 31, 0.85);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.8);
 }
 [data-theme=black-cerulean-rose] .project-card:hover {
   border-color: var(--accent-secondary);
-  box-shadow: 0 10px 30px rgba(255, 46, 136, 0.15);
+  box-shadow: 0 18px 45px rgba(255, 46, 136, 0.25), 0 0 20px rgba(0, 123, 167, 0.2);
+  transform: translateY(-8px) scale(1.015);
+}
+[data-theme=black-cerulean-rose] {
+  /* Dual Gradient Avatar Halo Frame */
+}
+[data-theme=black-cerulean-rose] .hero-avatar-wrapper .avatar-frame {
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background-image: linear-gradient(#17191F, #17191F), linear-gradient(135deg, #007BA7, #FF2E88);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 0 20px 45px rgba(255, 46, 136, 0.25);
+}
+[data-theme=black-cerulean-rose] .hero-avatar-wrapper .avatar-experience-badge {
+  border-radius: 16px;
+  background: #17191F;
+  border: 1px solid #FF2E88;
+  box-shadow: 0 10px 30px rgba(255, 46, 136, 0.3);
+}
+[data-theme=black-cerulean-rose] .btn {
+  border-radius: 12px;
+}
+[data-theme=black-cerulean-rose] .btn.btn-primary {
+  background: linear-gradient(135deg, #007BA7 0%, #005F82 100%);
+  box-shadow: 0 6px 20px rgba(0, 123, 167, 0.4);
+}
+[data-theme=black-cerulean-rose] .btn.btn-primary:hover {
+  background: linear-gradient(135deg, #009BD1 0%, #007BA7 100%);
+  box-shadow: 0 8px 28px rgba(0, 123, 167, 0.6);
+}
+[data-theme=black-cerulean-rose] .btn.btn-rose {
+  background: linear-gradient(135deg, #FF2E88 0%, #D4146A 100%);
+  color: #FFFFFF;
+  box-shadow: 0 6px 20px rgba(255, 46, 136, 0.4);
+}
+[data-theme=black-cerulean-rose] .btn.btn-rose:hover {
+  box-shadow: 0 8px 28px rgba(255, 46, 136, 0.6);
 }
 
 /* Responsive Styles */
